@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title><![CDATA[Devblog - DOFUS, le MMORPG stratégique.]]></title>
+    <description><![CDATA[Plusieurs milliers de joueurs dans le monde. DOFUS est un jeu de rôle massivement multijoueur où le but est de retrouver les 6 précieux Dofus pour devenir maître d'Amakna.]]></description>
+    <link>http://www.dofus.com/fr</link>
+    <language>fr</language>
+    <copyright><![CDATA[Devblog - DOFUS, le MMORPG stratégique. © 2018]]></copyright>
+    <lastBuildDate>Sun, 24 Jun 2018 14:44:12 +0200</lastBuildDate>
+    <pubDate>Sun, 24 Jun 2018 14:44:12 +0200</pubDate>
+    <url>http://www.dofus.com/favicon.ico</url>
+          <item>
+        <title><![CDATA[MàJ 2.47 : recherches graphiques]]></title>
+        <description><![CDATA[<p style="text-align:justify">Ils sont <strong>petits</strong>, <strong>hargneux</strong>, <strong>barbus</strong> et n&rsquo;ont <strong>peur de rien</strong> : les <strong>Nimbos</strong>, ces <strong>guerriers</strong> constamment de <strong>mauvais poil</strong> d&eacute;barquent dans le Monde des Douze. Vous pensez que tout <strong>ce qui est petit est mignon</strong> ? Pr&eacute;parez-vous &agrave; tomber de haut ! Mais d&rsquo;abord, d&eacute;couvrez <strong>en exclusivit&eacute; les recherches graphiques</strong> qui ont donn&eacute; vie &agrave; ces &eacute;ternels <em>ninsatisfaits</em>...</p>
+ <div><img alt="" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2018/06/07/884682.jpg" width="950" /></div>
+
+<p>&nbsp;</p>
+
+<p style="text-align:justify"><br />
+<br />
+<strong>Jusqu&rsquo;ici, les Nimbos s&rsquo;&eacute;taient faits petits</strong>. &Agrave; tel point que les Douziens avaient totalement oubli&eacute; leur existence. Mais depuis peu, ces <strong>guerriers rev&ecirc;ches</strong> ont mis le nez hors de leurs <strong>galeries souterraines</strong> pour venir semer la pagaille dans le Monde des Douze.&nbsp;</p>
+
+<p style="text-align:justify">Avant de les retrouver en jeu, d&eacute;couvrez <strong>deux pages de recherches graphiques exclusives</strong> !</p>
+
+<div><img alt="" height="1283" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-06-07/ac68fe5f94625416514b89a4e5be7d9f.jpg" width="950" /></div>
+
+<p><br />
+<br />
+&nbsp;</p>
+
+<div><img alt="" height="1283" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-06-07/8e26b1f977d333d2f55407cf931b74b6.jpg" width="950" /></div>
+
+<p>&nbsp;</p>
+
+<div>&nbsp;</div>
+
+<p style="text-align:justify"><strong>Les chariots suspendus</strong> vous &eacute;voqueront sans doute la c&eacute;l&egrave;bre sc&egrave;ne de la fonderie et du dragon <strong>Smaug le Dor&eacute;</strong>, dans <strong><em>Le Hobbit</em></strong> de <strong>Peter Jackson</strong>.</p>
+
+<p style="text-align:justify">S&rsquo;ils sont <strong>moiti&eacute; moins grands</strong> que le <strong>commun des Douzien</strong>, les Nimbos n&rsquo;ont pour autant pas un app&eacute;tit de Tofu ! Aussi, les <strong><em>ninterminables</em> banquets</strong> jouent un r&ocirc;le pr&eacute;pond&eacute;rant dans leur quotidien. Le <strong>ventre bien rempli</strong>, ils sont d&rsquo;une part (un peu) <strong>moins grognons</strong> et disposent de toutes les <strong>forces n&eacute;cessaires pour affronter leurs ennemis</strong> !&nbsp;</p>
+
+<p style="text-align:justify">Si malgr&eacute; leur apparente inhospitalit&eacute; vous persistez &agrave; vouloir faire la connaissance de ces petits bonshommes, <strong>rendez-vous d&egrave;s maintenant en jeu pour tester la b&ecirc;ta 2.47 ! </strong></p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/884954-maj-2-47-recherches-graphiques]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Fri, 08 Jun 2018 16:00:00 +0200</pubDate>
+                <guid isPermaLink="false">b9347435b359df368a53804563f303e7</guid>
+      </item>
+          <item>
+        <title><![CDATA[Élevage de montures]]></title>
+        <description><![CDATA[<p>Dans la mise &agrave; jour 2.47, nous allons introduire un nombre important de modifications sur le syst&egrave;me d&rsquo;&eacute;levage de montures ainsi qu&rsquo;une nouvelle esp&egrave;ce de montures.</p>
+
+<p>&nbsp;</p>
+ <div><img alt="" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2018/06/01/882525.jpg" width="950" /></div>
+
+<h2>Nos principaux objectifs</h2>
+
+<ul>
+	<li>Limiter la g&eacute;n&eacute;ration excessive des montures (principalement des Dragodindes) pour leur garantir une valeur plus importante et pour r&eacute;partir la production de montures entre un nombre plus important de joueurs.</li>
+	<li>Augmenter la destruction globale de ressources et dynamiser l&#39;&eacute;conomie des objets d&#39;&eacute;levage.</li>
+	<li>Renforcer la m&eacute;canique de rentabilit&eacute; d&eacute;croissante : plus les joueurs (&agrave; l&#39;&eacute;chelle d&#39;un serveur) &eacute;l&egrave;vent de montures, plus la consommation d&#39;objets d&#39;&eacute;levage doit augmenter et donc limiter la rentabilit&eacute; d&#39;&eacute;lever des montures suppl&eacute;mentaires (mise en place d&#39;un &eacute;quilibre naturel et dynamique).</li>
+	<li>Limiter la prolif&eacute;ration quasi exponentielle des capacit&eacute;s des Dragodindes et permettre l&#39;introduction naturelle en jeu de la capacit&eacute; cam&eacute;l&eacute;on pour les Dragodindes.</li>
+	<li>Maintenir un challenge continu et sain autour de l&rsquo;&eacute;levage et ne plus proposer un syst&egrave;me dans lequel des &eacute;levages peuvent &ecirc;tre &ldquo;purifi&eacute;s&rdquo; puis dupliqu&eacute;s &agrave; l&rsquo;infini sans contraintes.<br />
+	&nbsp;</li>
+</ul>
+
+<p><span style="color:#28170e">Voici les modifications que nous envisageons :</span></p>
+
+<h2>Mutualisation des &eacute;tables &agrave; l&rsquo;&eacute;chelle d&rsquo;un compte</h2>
+
+<p style="text-align:justify"><span style="color:#28170e">L&rsquo;&eacute;table sera g&eacute;r&eacute;e &agrave; l&rsquo;&eacute;chelle du compte et non plus sp&eacute;cifique par personnage (comme pour une banque).</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Nous souhaitons d&eacute;courager la multiplication des personnages pour augmenter artificiellement la taille des &eacute;tables.</span></p>
+
+<div style="text-align:justify">&nbsp;</div>
+
+<p style="text-align:justify"><span style="color:#28170e">La taille des &eacute;tables ne sera pas augment&eacute;e (elle restera &agrave; 250), nous ne souhaitons pas encourager des &eacute;levages plus massifs que ceux actuellement en place (qui contribuent &agrave; une production de montures que nous estimons d&eacute;mesur&eacute;e).</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Nous consid&eacute;rons que les joueurs doivent faire des choix sur les montures qu&rsquo;ils souhaitent garder et qu&rsquo;il s&rsquo;agit d&rsquo;une m&eacute;canique utile pour permettre aux &eacute;leveurs de ne pas couvrir trop facilement toutes les possibilit&eacute;s d&rsquo;&eacute;levage et ainsi permettre &agrave; plus de joueurs de trouver une &ldquo;place&rdquo; dans ce syst&egrave;me.<br />
+&nbsp;</span></p>
+
+<h2>Usure et choix des objets d&rsquo;&eacute;levage en enclos publics</h2>
+
+<p style="text-align:justify"><span style="color:#28170e">Les enclos publics sont n&eacute;cessaires pour garantir un acc&egrave;s simple &agrave; la fonctionnalit&eacute; d&rsquo;&eacute;levage &agrave; la majorit&eacute; des joueurs mais l&rsquo;absence d&rsquo;usure des objets d&rsquo;&eacute;levage permet &agrave; certains joueurs de multiplier sans limite le nombre de montures &eacute;lev&eacute;es en enclos publics en multipliant le nombre de personnages utilis&eacute;s pour l&rsquo;&eacute;levage.</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Nous allons retirer les objets d&rsquo;&eacute;levage pr&eacute;sents par d&eacute;faut dans les enclos publics, et laisser les joueurs utiliser leurs propres objets (de fa&ccedil;on instanci&eacute;e).</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Via cette modification, nous souhaitons r&eacute;introduire un m&eacute;canisme simple et naturel, d&eacute;j&agrave; pr&eacute;sent sur les enclos priv&eacute;s : &eacute;lever plus de montures va augmenter l&rsquo;usure des objets d&rsquo;&eacute;levage, acc&eacute;l&eacute;rer leur destruction, n&eacute;cessiter plus de production de ces objets et donc augmenter leur prix.<br />
+Ce m&eacute;canisme permet de r&eacute;guler la production disproportionn&eacute;e de montures tout en participant de fa&ccedil;on active &agrave; la destruction des ressources du jeu.</span><br />
+&nbsp;</p>
+
+<h2>Taille et bonus des enclos publics</h2>
+
+<p><span style="color:#28170e">Les enclos publics auront 10 places dans Bonta et Br&acirc;kmar et 5 places dans Astrub.<br />
+Les bonus gagn&eacute;s dans les enclos publics seront r&eacute;duits de 20% par rapport &agrave; ceux gagn&eacute;s dans les enclos priv&eacute;s.</span><br />
+&nbsp;</p>
+
+<h2>Nombre d&rsquo;enclos publics</h2>
+
+<p><span style="color:#28170e">Il y aura 1 enclos dans Bonta, Br&acirc;kmar et Astrub.</span></p>
+
+<h2>Transmission des capacit&eacute;s chez les Dragodindes</h2>
+
+<p style="text-align:justify"><span style="color:#28170e">Actuellement la transmission des capacit&eacute;s est quasiment exponentielle (il devient avec le temps de plus en plus facile de transmettre des capacit&eacute;s s&eacute;lectionn&eacute;es &agrave; d&rsquo;autres Dragodindes).<br />
+Ce fonctionnement ne nous semble pas satisfaisant car il fait tendre l&rsquo;&eacute;levage de Dragodindes vers un &ldquo;optimum&rdquo; qui permet d&rsquo;inonder le march&eacute; des Dragodindes avec des montures optimis&eacute;es.<br />
+Nous allons r&eacute;duire la probabilit&eacute; de transmission des capacit&eacute;s des Dragodindes &agrave; 1 chance sur 20.<br />
+Il sera toujours possible d&rsquo;optimiser la transmission des capacit&eacute;s entre Dragodindes mais il ne sera plus possible de maintenir &agrave; l&rsquo;infini des capacit&eacute;s sp&eacute;cifiques sur l&rsquo;ensemble d&rsquo;un &eacute;levage.</span></p>
+
+<h2>R&eacute;duction de la g&eacute;n&eacute;ration des Dragodindes</h2>
+
+<p><span style="color:#28170e">Nous allons limiter le nombre de reproductions par Dragodinde &agrave; 5 (contre 20 actuellement).<br />
+Cette modification nous semble n&eacute;cessaire pour r&eacute;duire la production de Dragodindes et la possibilit&eacute; de &ldquo;dupliquer&rdquo; &agrave; l&rsquo;infini les &eacute;levages optimis&eacute;s.</span></p>
+
+<h2>R&eacute;introduction naturelle de la capacit&eacute; cam&eacute;l&eacute;on pour les Dragodindes</h2>
+
+<p><span style="color:#28170e">La capacit&eacute; Cam&eacute;l&eacute;on pourra appara&icirc;tre (et se transmettre) naturellement sur les Dragodindes.<br />
+Elle ne sera pas r&eacute;introduite dans la boutique.</span></p>
+
+<h2>Impossibilit&eacute; de reproduire des montures sauvages avec des montures non sauvages</h2>
+
+<p><span style="color:#28170e">La reproduction de montures sauvages avec des montures non sauvages sera d&eacute;sormais impossible.<br />
+Nous pensons que la possibilit&eacute; de reproduire des montures sauvages avec des non sauvages permet trop facilement d&#39;effectuer des reproductions tout en introduisant 1 arbre g&eacute;n&eacute;alogique pur, ce qui va &agrave; l&rsquo;encontre du concept de g&eacute;n&eacute;alogie des montures.</span></p>
+
+<h2>Modification des recettes d&rsquo;objets d&rsquo;&eacute;levage</h2>
+
+<p style="text-align:justify"><span style="color:#28170e">L&rsquo;ensemble des recettes d&rsquo;objets d&rsquo;&eacute;levage seront modifi&eacute;es pour r&eacute;duire le nombre d&rsquo;ingr&eacute;dients en commun entre les recettes.</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Nous souhaitons que les essences de Boss soient les facteurs importants et limitants de ces recettes et non pas les ingr&eacute;dients communs.<br />
+Nous allons &eacute;galement ajouter les objets d&rsquo;&eacute;levage &ldquo;manquants&rdquo; (ceux qui correspondent &agrave; des essences de Boss qui n&rsquo;ont pas encore &eacute;t&eacute; utilis&eacute;es).</span></p>
+
+<h2>&Eacute;quilibrage des bonus des objets d&rsquo;&eacute;levage</h2>
+
+<p><span style="color:black">Actuellement un nombre trop important d&rsquo;objets d&rsquo;&eacute;levage ne sont pas assez fabriqu&eacute;s ou utilis&eacute;s car leurs bonus ou leur durabilit&eacute; n&rsquo;est pas jug&eacute;e suffisante.<br />
+Nous avons &eacute;quilibr&eacute; les bonus et caract&eacute;ristiques des objets les moins utilis&eacute;s, nous avons entre autres augment&eacute; la durabilit&eacute; de certains objets d&rsquo;&eacute;levage.</span></p>
+
+<h2>&Eacute;quilibrage des bonus de montures</h2>
+
+<p><span style="color:#28170e">Les bonus des Dragodindes sont modifi&eacute;s pour que ceux des premi&egrave;res g&eacute;n&eacute;rations soient plus comp&eacute;titifs avec ceux des derni&egrave;res g&eacute;n&eacute;rations.</span></p>
+
+<p><span style="color:#28170e">Nous souhaitons &eacute;galement nous assurer que chacune des trois esp&egrave;ces de montures ait un bonus significatif et sp&eacute;cifique.<br />
+Les Dragodindes seront sp&eacute;cialis&eacute;es via un bonus en Vitalit&eacute; important, les Muldos auront l&rsquo;exclusivit&eacute; du bonus PM et la nouvelle esp&egrave;ce de montures aura un bonus sp&eacute;cifique que nous vous laisserons d&eacute;couvrir.</span></p>
+
+<h2>Nouvelle esp&egrave;ce de montures</h2>
+
+<p style="text-align:justify"><span style="color:#28170e">Une troisi&egrave;me esp&egrave;ce de monture sera disponible &agrave; la sortie de la version 2.47, elle devrait permettre de combler certains manques tout en cr&eacute;ant un nouveau march&eacute; d&rsquo;&eacute;levage.<br />
+Il s&rsquo;agira d&rsquo;une esp&egrave;ce plus difficile &agrave; capturer et &agrave; reproduire, destin&eacute;e aux &eacute;leveurs les plus chevronn&eacute;s.</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Notre objectif est de conserver un &eacute;levage simplifi&eacute; via les Dragodindes et de proposer un &eacute;levage plus exigeant avec les Muldos et la nouvelle esp&egrave;ce.</span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<h2>Parchemins de caract&eacute;ristiques (quasi) exclusifs aux Dragodindes</h2>
+
+<p><span style="color:#28170e">Les gains de Doplons en affrontant les Dopeuls seront supprim&eacute;s pour plusieurs raisons :</span></p>
+
+<ul>
+	<li>Nous souhaitons &agrave; terme limiter de fa&ccedil;on significative l&#39;impact des combats de Dopeuls. Cette m&eacute;canique journali&egrave;re est tr&egrave;s chronophage et manque de profondeur (activit&eacute; uniquement solo et qui ne propose pas plusieurs fa&ccedil;ons d&#39;&ecirc;tre abord&eacute;e ou pratiqu&eacute;e) pour justifier que des joueurs puissent r&eacute;p&eacute;ter r&eacute;guli&egrave;rement cette activit&eacute; en y consacrant une part importante de leur temps de jeu.</li>
+	<li style="text-align:justify">Nous souhaitons recentrer la production des parchemins de caract&eacute;ristiques sur les Dragodindes afin de garantir une meilleure rentabilit&eacute; sur la dur&eacute;e de cette activit&eacute;, leur&nbsp;&eacute;levage sera une source de destruction potentiellement importante en 2.47 et cela devrait am&eacute;liorer la valeur des ressources.</li>
+</ul>
+
+<div style="text-align:justify">
+<p><span style="color:#28170e">Les avis de recherche continueront de fournir des Doplons et pourront toujours &ecirc;tre &eacute;chang&eacute;s contre des parchemins de caract&eacute;ristiques.</span></p>
+
+<p><span style="color:#28170e">Les recettes comprenant des galets issus des Doplons sont modifi&eacute;es pour utiliser des galets issus des Koliz&eacute;tons (afin d&#39;augmenter par effet de bord la destruction de Koliz&eacute;tons).</span></p>
+
+<h2>Conclusion</h2>
+
+<p style="text-align:justify"><span style="color:#28170e">Nous sommes conscients que ces modifications concernent principalement des restrictions sur l&rsquo;&eacute;levage et qu&rsquo;elles vont r&eacute;duire la production de montures.</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Notre objectif est de retrouver un syst&egrave;me d&rsquo;&eacute;levage &ldquo;sain&rdquo; avec moins de montures g&eacute;n&eacute;r&eacute;es.</span></p>
+
+<p style="text-align:justify"><span style="color:#28170e">Nous souhaitons que le prix individuel des montures augmente et pour cela nous devons nous assurer que le march&eacute; de l&rsquo;&eacute;levage ne soit plus autant satur&eacute; qu&rsquo;il ne l&rsquo;est actuellement.</span></p>
+</div>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/883597-elevage-montures]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Mon, 04 Jun 2018 16:00:00 +0200</pubDate>
+                <guid isPermaLink="false">668fbabcdb69ae03c5af2e36b075dbb7</guid>
+      </item>
+          <item>
+        <title><![CDATA[Les Nimbos]]></title>
+        <description><![CDATA[<p>Si vous pensiez avoir explor&eacute; <strong>Frigost</strong> en long, en large et en travers, il se pourrait que vous soyez pass&eacute;s &agrave; c&ocirc;t&eacute; d&#39;un peuple jusque-l&agrave; tr&egrave;s discret, repr&eacute;sent&eacute; dans cette contr&eacute;e par le Clan Martegel : <strong>les Nimbos</strong>.</p>
+ <div><img alt="" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2018/05/29/881594.jpg" width="950" /><br />
+&nbsp;</div>
+
+<p>Tapis, <strong>sous le Mont Torrideau</strong>, les Martegel s&#39;&eacute;taient jusqu&#39;ici faits petits, en particulier depuis la Mal&eacute;diction que Djaul jeta sur Frigost. Des &eacute;v&egrave;nements r&eacute;cents semblent toutefois les avoir motiv&eacute;s &agrave; se faire remarquer et leur extr&ecirc;me hostilit&eacute; pousse la Garde du Jour sans Fin &agrave; implorer l&rsquo;aide des aventuriers afin d&rsquo;esp&eacute;rer contenir leur col&egrave;re.</p>
+
+<p>&nbsp;</p>
+
+<p>Parmi les Nimbos du Clan Martegel, il y en a qui sont particuli&egrave;rement r&eacute;sistants : <strong>les Tanklumes</strong>. Sp&eacute;cialis&eacute;s dans la protection rapproch&eacute;e, ils n&rsquo;h&eacute;siteront pas &agrave; prendre les coups &agrave; la place de leurs alli&eacute;s.<br />
+&nbsp;</p>
+
+<div>
+<div style="text-align:center"><img alt="" height="372" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-05-28/32bff3eda33f02274e20064e998a3eb5.gif" width="459" /></div>
+</div>
+
+<div style="text-align:center"><em>Tanklume&nbsp;</em></div>
+
+<div>&nbsp;</div>
+
+<p>Il y a &eacute;galement <strong>les Kasroks</strong>, qui peuvent assez facilement toucher plusieurs ennemis &agrave; la fois gr&acirc;ce &agrave; leur marteau. Tandis que <strong>les Vatenbi&egrave;res</strong> utilisent leur hache de fa&ccedil;on surprenante, leur permettant d&rsquo;&ecirc;tre efficace &agrave; longue distance.</p>
+
+<div>
+<div style="text-align:center"><img alt="" height="322" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-05-28/160d782623952591cb7052c56a462126.gif" width="414" /></div>
+</div>
+
+<div style="text-align:center"><em>Kasrok</em></div>
+
+<div>
+<div style="text-align:center"><img alt="" height="322" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-05-28/9d58e6cc813db639ddf721730ee074ff.gif" width="414" /></div>
+</div>
+
+<div style="text-align:center"><em>Vatenbiere&nbsp;</em></div>
+
+<div>&nbsp;</div>
+
+<p><br />
+Certains Nimbos sont quant-&agrave;-eux mont&eacute;s sur un Boufmouth apprivois&eacute;, c&rsquo;est par exemple le cas des <strong>Barb&eacute;liers</strong> : tr&egrave;s dangereux en m&ecirc;l&eacute;e, ils se servent de leur Boufmouth pour se d&eacute;placer plus rapidement.<br />
+&nbsp;</p>
+
+<div>
+<div style="text-align:center"><img alt="" height="322" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-05-29/dd21608e9c9842d056832418da7dc361.gif" width="414" /></div>
+</div>
+
+<div style="text-align:center"><em>Barb&eacute;lier&nbsp;</em></div>
+
+<p><br />
+<strong>Les Boufboss</strong> poss&egrave;dent &eacute;galement une monture Bouftonmouth qu&rsquo;ils utilisent pour mieux garder la distance avec ses adversaires pendant qu&rsquo;ils les lapident &agrave; l&rsquo;aide de leur fronde.</p>
+
+<div>
+<div style="text-align:center"><img alt="" height="322" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-05-28/1b74010e568147891de1f34877e1b862.gif" width="414" /></div>
+</div>
+
+<div style="text-align:center"><em>Boufbos</em></div>
+
+<p><br />
+&Agrave; la t&ecirc;te du clan, il y a un <strong>roi Dazak Martegel</strong> tr&egrave;s en col&egrave;re. Sa monture magique le rend particuli&egrave;rement mobile tandis qu&rsquo;il utilise son charisme de souverain pour motiver et revigorer ses troupes.</p>
+
+<p>&nbsp;</p>
+
+<p>Mais s&rsquo;il existe un caract&egrave;re commun &agrave; tous ces guerriers, c&rsquo;est bien qu&rsquo;ils ne d&eacute;bordent pas de patience, et cela se ressent dans leur fa&ccedil;on de combattre. S&#39;il se passe trop longtemps sans qu&#39;ils puissent enfoncer leur arme (ou leur cr&acirc;ne) dans quelque chose, ils s&#39;&eacute;nervent et deviennent encore plus dangereux, y compris pour eux-m&ecirc;mes.</p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/881556-nimbos]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Tue, 29 May 2018 16:00:00 +0200</pubDate>
+                <guid isPermaLink="false">597c96681e99ddcbc6b7ce9ea6a11494</guid>
+      </item>
+          <item>
+        <title><![CDATA[Devblog GD : accessibilité et équilibrage des équipements.]]></title>
+        <description><![CDATA[Avec la mise &agrave; jour 2.46 nous pr&eacute;voyons d&#39;apporter plusieurs modifications pour faciliter l&#39;obtention des &eacute;quipements de bas et moyen niveaux (chapeaux, bottes, etc.). <div class="ak-big-image template_block"><img alt="" class="img-responsive" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2016/01/04/446433.jpg" width="950" /></div>
+
+<p>&nbsp;</p>
+
+<p>Au fil des mises &agrave; jour, les gains d&#39;exp&eacute;rience des personnages ont progressivement augment&eacute; (via les Challenges, les Succ&egrave;s, les Idoles, les bonus de personnages secondaires, l&#39;acc&eacute;l&eacute;ration des combats, les donjons modulaires, les &eacute;toiles sur les monstres, la capture et l&#39;affrontement de monstres en ar&egrave;ne, etc.)</p>
+
+<p>Les personnages gagnent des niveaux plus rapidement qu&#39;il y a quelques ann&eacute;es mais proportionnellement nous estimons qu&#39;ils ne renouvellent pas leurs &eacute;quipements assez rapidement &agrave; faible et moyen niveau (malgr&eacute; l&#39;introduction de nombreuses m&eacute;caniques pour augmenter la g&eacute;n&eacute;ration de butin au fil des mises &agrave; jour). Ce fonctionnement incite les joueurs &agrave; garder les m&ecirc;mes &eacute;quipements trop longtemps alors que nous aimerions qu&#39;ils puissent profiter plus facilement de la grande diversit&eacute; d&#39;&eacute;quipements qui existe dans toutes les tranches de niveau.</p>
+
+<p>&nbsp;</p>
+
+<h2>Nos objectifs</h2>
+
+<p>Voici nos objectifs principaux :</p>
+
+<ul>
+	<li>Faciliter l&#39;acquisition et le renouvellement des &eacute;quipements &agrave; faible et moyen niveau.</li>
+	<li>Permettre un renouvellement des &eacute;quipements &agrave; faible et moyen niveau qui soit mieux synchronis&eacute; avec les gains de niveaux des personnages.</li>
+	<li>R&eacute;duire le nombre de combats n&eacute;cessaires pour fabriquer des &eacute;quipements.</li>
+	<li>&Eacute;quilibrer les bonus des diff&eacute;rents &eacute;quipements de faible et moyen niveau afin d&#39;augmenter les choix d&#39;&eacute;quipements viables disponibles.</li>
+	<li>Maintenir une destruction importante des &eacute;quipements via la g&eacute;n&eacute;ration des runes de forgemagie.</li>
+</ul>
+&nbsp;
+
+<h2>Recettes des &eacute;quipements</h2>
+
+<p>Les recettes d&#39;&eacute;quipements (hors Troph&eacute;es et boucliers) jusqu&#39;au niveau 100 sont simplifi&eacute;es et harmonis&eacute;es. Notre objectif est de proposer des recettes plus rapides &agrave; fabriquer &agrave; faible et moyen niveau.<br />
+Cette modification simplifiera en parall&egrave;le la progression des m&eacute;tiers de fabrication d&#39;&eacute;quipements &agrave; faible et moyen niveau.</p>
+
+<p>A plus long terme, nous avons l&#39;intention de revoir une partie des recettes des &eacute;quipements de niveau 100+. Les recettes des objets de tr&egrave;s haut niveau nous semblent globalement satisfaisantes, il est donc peu probable qu&#39;elles soient simplifi&eacute;es ou modifi&eacute;es de fa&ccedil;on significative.</p>
+
+<p>&nbsp;</p>
+
+<h2>Probabilit&eacute; d&#39;obtention des ressources</h2>
+
+<p>Les probabilit&eacute;s d&#39;obtention des ressources sur les monstres sont augment&eacute;es (principalement &agrave; faible et moyen niveau), afin de r&eacute;duire le nombre de combats n&eacute;cessaires pour fabriquer un &eacute;quipement.<br />
+Par exemple, les ressources communes (10% de probabilit&eacute; d&#39;obtention actuellement) auront d&eacute;sormais une probabilit&eacute; d&#39;obtention de 50% sur un monstre de niveau 1, de 30% sur un monstre de niveau 100 et de 10% sur un monstre de niveau 200. Ce fonctionnement permet d&#39;avoir des ressources plus faciles &agrave; obtenir &agrave; faible et moyen niveau lorsque les personnages ne peuvent pas facilement cumuler beaucoup de bonus de butin.</p>
+
+<p>&nbsp;</p>
+
+<h2>Progression des m&eacute;tiers de r&eacute;colte</h2>
+
+<p>La progression des m&eacute;tiers de r&eacute;colte est am&eacute;lior&eacute;e, l&#39;exp&eacute;rience gagn&eacute;e lors des r&eacute;coltes est doubl&eacute;e afin d&#39;acc&eacute;l&eacute;rer l&#39;acc&egrave;s &agrave; un plus grand nombre de ressources r&eacute;coltables.</p>
+
+<p>&nbsp;</p>
+
+<h2>&Eacute;quilibrage des bonus</h2>
+
+<p>Nous avons profit&eacute; de ce chantier pour &eacute;quilibrer la puissance des objets jusqu&#39;au niveau 100. Dans la majorit&eacute; des cas, nous avons augment&eacute; la puissance des objets trop faibles et r&eacute;duit la part d&#39;al&eacute;atoire entre les valeurs minimales et maximales des bonus. Certains effets ont &eacute;t&eacute; ajout&eacute;s ou augment&eacute;s et d&#39;autres tout simplement remplac&eacute;s.</p>
+
+<p>Ces modifications ne sont pas r&eacute;troactives, il est n&eacute;cessaire d&#39;utiliser des runes de forgemagie ou des orbes r&eacute;g&eacute;n&eacute;rants sur les objets modifi&eacute;s qui auront &eacute;t&eacute; fabriqu&eacute;s avant la mise &agrave; jour 2.46.</p>
+
+<p>&nbsp;</p>
+
+<h2>G&eacute;n&eacute;ration des runes de forgemagie</h2>
+
+<p>Actuellement, la g&eacute;n&eacute;ration des runes de forgemagie est globalement sup&eacute;rieure de 10% &agrave; leur destruction.<br />
+Dans la version 2.46 nous avons d&eacute;cid&eacute; de r&eacute;duire la g&eacute;n&eacute;ration des runes de forgemagie de 20% afin de r&eacute;duire cet &eacute;cart entre g&eacute;n&eacute;ration et destruction mais &eacute;galement pour compenser la simplification des recettes et l&#39;augmentation des probabilit&eacute;s d&#39;obtention des ressources.<br />
+Il sera plus facile de produire les objets de faible et moyen niveau, il sera donc plus facile de produire des runes de forgemagie.</p>
+
+<p>Nous consid&eacute;rons que le prix des runes de forgemagie est globalement tr&egrave;s faible et nous envisageons de r&eacute;duire progressivement la g&eacute;n&eacute;ration des runes de forgemagie dans de prochaines mises &agrave; jour si cela peut avoir un effet b&eacute;n&eacute;fique sur la destruction des objets et ressources.</p>
+
+<p>Il ne nous est cependant pas possible de d&eacute;terminer vers quel &eacute;quilibre pourrait tendre le prix des runes de forgemagie. Certains joueurs sont limit&eacute;s par le budget qu&#39;ils sont pr&ecirc;ts &agrave; investir dans la forgemagie d&#39;un objet, d&#39;autres adaptent le budget qu&#39;ils vont investir en forgemagie en fonction de leurs objectifs. Ces deux approches de la forgemagie ont des effets diff&eacute;rents sur le march&eacute; des runes et nous ne pouvons pas partir du principe qu&#39;une baisse de X% de la g&eacute;n&eacute;ration des runes de forgemagie se traduise par une augmentation de X% du prix des runes de forgemagie.</p>
+
+<p>Nous aurons probablement besoin d&#39;avancer de fa&ccedil;on it&eacute;rative sur ce sujet.<br />
+La g&eacute;n&eacute;ration des runes de forgemagie repr&eacute;sente une des principales sources de destruction d&#39;objets (et donc de ressources), il nous semble important d&#39;utiliser ce levier pour augmenter ou maintenir une utilit&eacute; et une valeur suffisantes pour l&#39;ensemble des ressources et des objets.</p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/852496-devblog-gd-accessibilite-equilibrage-equipements]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Wed, 28 Feb 2018 15:00:00 +0200</pubDate>
+                <guid isPermaLink="false">2b9d629e404c4d911adf639bb54ac56c</guid>
+      </item>
+          <item>
+        <title><![CDATA[Devblog Graph: Astrub]]></title>
+        <description><![CDATA[<p>On a commenc&eacute; &agrave; vous en parler dans le <a href="https://www.dofus.com/fr/mmorpg/actualites/news/849655-micro-blog-3-astrub">microblog d&eacute;di&eacute;</a>, <b>la ville mercenaire d&rsquo;Astrub</b> a subi un ravalement de fa&ccedil;ade complet ! D&eacute;couvrez les coulisses de ce chantier titanesque !</p>
+ <div class="ak-big-image template_block"><img alt="" class="img-responsive" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2018/02/23/850739.jpg" width="950" /></div>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Notre d&eacute;marche initiale &eacute;tait de remettre Astrub au propre, de rafra&icirc;chir le level design pour qu&#39;anciens et nouveaux joueurs puissent d&eacute;couvrir ou red&eacute;couvrir cet endroit embl&eacute;matique du jeu.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Les influences ont &eacute;t&eacute; nombreuses lorsque nous nous sommes lanc&eacute;s dans la refonte d&rsquo;Astrub. On s&rsquo;&eacute;tait &eacute;galement mis comme objectif de &ldquo;rationaliser&rdquo; la ville, de l&rsquo;organiser pour que les flux de joueurs soit distribu&eacute;s de fa&ccedil;on homog&egrave;ne&nbsp;sur toutes les cartes. C&#39;&eacute;tait important pour nous car cela apporte de la vie dans la ville. La cit&eacute; est sensiblement plus petite, mais il est beaucoup plus efficace et pratique de s&rsquo;y d&eacute;placer. Nous avons pris soin&nbsp;de ne pas mettre d&rsquo;&eacute;l&eacute;vation et de rester sur un plan plat pour ne pas perdre le joueur.&nbsp;<br />
+<br />
+Nous avions dans l&rsquo;id&eacute;e, au d&eacute;part, d&rsquo;int&eacute;grer&nbsp;des arri&egrave;res plans o&ugrave;&nbsp;la cit&eacute;e d&rsquo;Astrub serait construite sur plusieurs niveaux. </span></span></span></p>
+
+<div class="ak-big-image template_block"><img alt="" class="img-responsive" height="2784" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-02-23/fabd55c1ba0ec3b14a1eb8ea4ae4a763.jpg" width="5044" />
+<div class="ak-big-image-legend template_block_element">Recherche graphique pr&eacute;-prod</div>
+</div>
+
+<p style="margin-bottom:.0001pt"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Mais cela nuisait r&eacute;ellement au d&eacute;placement sachant qu&rsquo;Astrub accueille de nouveaux joueurs.&nbsp;Nous ne pouvions pas nous permettre d&rsquo;avoir un level design compliqu&eacute;.</span></span></span></p>
+
+<div class="ak-big-image template_block"><img alt="" class="img-responsive" height="753" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-02-23/cdc7a8043c6630a34e4b506d0f421d53.png" width="1487" />
+<div class="ak-big-image-legend template_block_element">Recherche graphique pr&eacute;-prod</div>
+</div>
+
+<p class="fake">&nbsp;</p>
+
+<h2>La Vieille Ville d&rsquo;Astrub</h2>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Nous avons ajout&eacute; de nouveaux &eacute;l&eacute;ments dans Astrub, pour renforcer les racines mercenaires de la ville profond&eacute;ment ancr&eacute;es jusque dans l&rsquo;architecture des b&acirc;timents de la cit&eacute;.&nbsp;Cet hypercentre regroupe des points n&eacute;vralgiques importants : la Tour de la Milice, la Banque, les H&ocirc;tels de Vente, Zaap etc.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Nous avons conserv&eacute; le background historique de la ville et sa&nbsp;muraille qui ceinture toute la Vieille Ville. Elle n&rsquo;entrave d&eacute;sormais plus les d&eacute;placements des joueurs.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Le Temple Divin, accueillera les &acirc;mes fra&icirc;chement incarn&eacute;es d&egrave;s leur arriv&eacute;e dans le Monde des Douze depuis Incarnam. Ce b&acirc;timent rassemble toutes les statues de classe, ce qui nous permet de gagner de la place et d&rsquo;optimiser le nombre de cartes.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">La liaison entre Incarnam et le plan mat&eacute;riel est d&eacute;sormais assur&eacute;e par un hyperzaap qui t&eacute;l&eacute;portera le joueur dans le Temple Divin. Cette liaison manquait de coh&eacute;rence auparavant, on descendait par un ballon et on remontait par une statue. Faire ce changement nous chatouillait depuis un moment. </span></span></span></p>
+
+<div class="ak-big-image template_block"><img alt="" class="img-responsive" height="1008" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-02-23/37812244dee96c79e7328cf7fcead869.jpg" width="1952" />
+<div class="ak-big-image-legend template_block_element">Le Temple Divin</div>
+</div>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Les H&ocirc;tels de Vente ont &eacute;t&eacute; fusionn&eacute;s et classifi&eacute;s&nbsp;en 3 cat&eacute;gories : ressources / consommables / &eacute;quipements,&nbsp;pour garder de la coh&eacute;rence avec votre inventaire.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Nous avons port&eacute; une attention particuli&egrave;re &agrave; ce qu&#39;une carte ayant un point d&rsquo;int&eacute;r&ecirc;t important (un zaap par exemple) ne soit pas&nbsp;une carte o&ugrave; les joueurs ne font que passer pour aller vers un autre lieu. Cela avait pour cons&eacute;quence de ralentir la progression des joueurs &ldquo;qui ne faisaient que passer par l&agrave;.&quot;</span></span></span></p>
+
+<h2>Les Faubourgs d&rsquo;Astrub</h2>
+
+<div class="ak-big-image template_block"><img alt="" class="img-responsive" height="1008" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-02-23/b6c31a7495a8233d9da770cc4231dd6c.jpg" width="1952" />
+<div class="ak-big-image-legend template_block_element">Atelier des cordonniers</div>
+</div>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Autour de la Vieille Ville, les Faubourgs d&rsquo;Astrub, bouillonnent de vie. On y trouvera les ateliers de craft, dispos&eacute;s de fa&ccedil;on &agrave; ce&nbsp;que les m&eacute;tiers compl&eacute;mentaires soient proches les uns des autres.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">De nouveaux &eacute;l&eacute;ments font leur apparition : un enclos public voit le jour, une biblioth&egrave;que et une nouvelle zone :&nbsp;l&rsquo;exploitation mini&egrave;re. Les Carri&egrave;res prendront une place plus importante&nbsp;dans l&rsquo;aventure avec une nouvelle famille de monstres.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Cette refonte englobe &eacute;galement les zones mitoyennes d&rsquo;Astrub. Ainsi, le Champs du Repos, les Champs d&rsquo;Astrub, les Calanques d&#39;Astrub, la For&ecirc;t, la Prairie et la Carri&egrave;re ont &eacute;galement &eacute;t&eacute; modernis&eacute;s.</span></span></span><br />
+&nbsp;</p>
+
+<p style="margin-bottom: 0.0001pt; text-align: justify;"><span style="line-height:normal"><span arial="" style="font-family:"><span style="color:black">Il est plus facile de trouver son chemin, de larges routes menant vers les points cardinaux du Monde des Douze ont &eacute;t&eacute; trac&eacute;es.&nbsp;C&rsquo;est un r&eacute;seau de voirie complet qui est n&eacute; avec ses routes principales et secondaires. Des panneaux plac&eacute;s au bord du chemin vous indiqueront maintenant la direction &agrave; suivre.</span></span></span></p>
+
+<div class="ak-big-image template_block"><img alt="" class="img-responsive" height="396" src="https://s.ankama.com/www/static.ankama.com/upload/backoffice/direct/2018-02-23/486c72aa294cd3ba7e30dbffc8db06a6.jpg" width="726" />
+<div class="ak-big-image-legend template_block_element">Panneau directionnel</div>
+</div>
+<strong>[Lorko] - Directeur Artistique</strong>]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/850740-devblog-graph-astrub]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Fri, 23 Feb 2018 17:00:00 +0200</pubDate>
+                <guid isPermaLink="false">2d44c279b5569f11c882e08e669950e4</guid>
+      </item>
+          <item>
+        <title><![CDATA[Lettre des Sadeurs #3]]></title>
+        <description><![CDATA[Une nouvelle lettre r&eacute;dig&eacute;e par les diff&eacute;rents acteurs du conseil des sadeurs est disponible. D&eacute;couvrez en plus sur leurs activit&eacute;s, ainsi que celles des diff&eacute;rents groupes d&#39;animation de vos serveurs ! <div class="ak-big-image template_block"><img alt="" class="img-responsive" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2015/07/30/437589.jpg" width="950" /></div>
+
+<p>Les guildes et clans membres du <strong>Conseil des Sadeurs</strong> (CdS) sont fiers de vous pr&eacute;senter cette troisi&egrave;me lettre adress&eacute;e &agrave; la communaut&eacute;. De nombreuses choses se sont produites depuis avril dernier, aussi bien au niveau du CdS que du monde de l&rsquo;&eacute;v&eacute;nementiel et du jeu de r&ocirc;le sur Dofus. En premier lieu, nous avons fait circuler <strong>plusieurs sondages afin d&rsquo;estimer la notori&eacute;t&eacute; du CdS</strong>, et il s&rsquo;av&egrave;re que peu de monde sait vraiment <strong>qui nous sommes et ce que nous faisons</strong>. Afin d&rsquo;y rem&eacute;dier, nous avons r&eacute;alis&eacute; pour vous l&rsquo;infographie suivante.</p>
+
+<center><img alt="presentation du conseil des sadeurs" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-1.png" /></center>
+
+<h2>LE BILAN</h2>
+
+<p>Tout d&rsquo;abord, nous ne pourrions d&eacute;marrer cette lettre sans parler de l&rsquo;arriv&eacute;e d&rsquo;<strong>un nouveau membre</strong> au sein du CdS : le <strong>Clan de Lyre Ehel</strong>, bas&eacute; sur Ush. La famille s&rsquo;agrandit !</p>
+
+<p>Concernant nos r&eacute;alisations &eacute;v&eacute;nementielles communes, nous avons organis&eacute; <a href="https://www.dofus.com/fr/forum/1178-comptoir-taverne-rp/2253257-animation-recits-invention-1-venez-convie">le premier opus des &laquo; R&eacute;cits d&rsquo;Invention &raquo;</a> sur le forum officiel, un concours d&rsquo;histoires communautaires auquel vous avez &eacute;t&eacute; nombreux &agrave; participer. En outre, plusieurs &eacute;v&eacute;nements ont &eacute;t&eacute; organis&eacute;s en jeu par les membres volontaires de l&rsquo;&eacute;quipe d&rsquo;animation, avec la collaboration des Sadeurs, sur le th&egrave;me des Glutins :</p>
+
+<center><img alt="animations sur le thème des glutins" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-2.png" /></center>
+
+<h3>Liens des annonces et comptes-rendus :</h3>
+
+<ul>
+	<li><a href="https://www.dofus.com/fr/forum/1264-animations-maitres-jeu/2259025-termine-julith-entrainent-bout-nuit-glutins-minuit">Ils m&rsquo;entra&icirc;nent, au bout de la nuit. Les, Glutins de minuit !</a> ;</li>
+	<li>la seconde partie des <a href="https://www.dofus.com/fr/forum/1264-animations-maitres-jeu/2263618-6-javian-ush-glutins-mutins-partie-2">Glutins Mutins/ ;</a></li>
+	<li><a href="https://www.dofus.com/fr/forum/1264-animations-maitres-jeu/2263756-6-javian-pandore-premices-nowel-skell-jackington">les Pr&eacute;mices du Nowel de Skell Jackington</a> ;</li>
+	<li>et <a href="https://www.dofus.com/fr/forum/1264-animations-maitres-jeu/2263689-cr-agride-revolte-violente-nowel-evente">R&eacute;volte violente, &agrave; Nowel s&rsquo;&eacute;vente</a>.</li>
+</ul>
+
+<center><img alt="animations du clan des sadeurs" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-3.jpg" /></center>
+
+<p>Autre projet d&rsquo;ampleur et non des moindres, &agrave; la lecture de cette lettre, vous aurez certainement d&eacute;couvert le fin mot de l&rsquo;histoire du &laquo; <a href="https://www.dofus.com/fr/forum/1563-animations-communautaires/2254438-event-vol-montres">Vol des montres</a> &raquo;. Cette derni&egrave;re r&eacute;sulte d&rsquo;un effort conjugu&eacute; des r&ocirc;listes et animateurs dofusiens d&eacute;passant le simple cadre du CdS et faisait partie des grands chantiers que nous souhaitions mettre en place en 2017 !</p>
+
+<p>S&rsquo;il faut parler des joies, il convient &eacute;galement d&rsquo;aborder les peines et les regrets : en effet, nous n&rsquo;avons pas pu mener &agrave; bien tous les projets que nous annoncions dans notre pr&eacute;c&eacute;dente lettre. <a href="https://www.youtube.com/channel/UCPQrIzD_ZWP9fh_xu0ZA6BA">La cha&icirc;ne Youtube</a> d&eacute;di&eacute;e au RP que nous vous y pr&eacute;sentions a pein&eacute; &agrave; d&eacute;coller, faute de main-d&rsquo;oeuvre (monteurs, doubleurs). Nous manquons de bras, mais aussi de voix, pr&ecirc;tez-nous les v&ocirc;tres !</p>
+
+<p>Concernant l&rsquo;activit&eacute; individuelle des clans membres du CdS, voici une autre infographie qui en fait le r&eacute;capitulatif.</p>
+
+<center><img alt="animations du clan des sadeurs" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-4.png" /></center>
+
+<p>Sachez qu&rsquo;il n&rsquo;y a pas que le CdS qui fait bouger les choses, bien au contraire, puisque le paysage &eacute;v&eacute;nementiel a aussi &eacute;t&eacute; marqu&eacute; par :</p>
+
+<ul>
+	<li>le concours de havre-sac des <a href="http://leskipages.jeuxvideoforum.net/">Kipages</a>, ainsi que leur animation <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2240287-animation-hel-munster-eaux-troubles">en eaux troubles</a> sur Furye,</li>
+	<li>la <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2237768-compte-rendu-menalt-9-juinssidor-647-contrat-mefiance-artis">myst&eacute;rieuse enqu&ecirc;te priv&eacute;e</a> et le <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2259511-compte-rendu-merkator-29-octolliard-647-cercle-mortael">cercle Mortael</a> de Tae et Jiraya-Yuno sur Merkator,</li>
+	<li>la chasse au tr&eacute;sor de la <a href="http://krisegis-compagnie.forumactif.org/">Compagnie de Krisegis</a> sur Brumen,</li>
+	<li>Tshaka-boy et son animation consacr&eacute;e &agrave; la <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2245518-1er-fraouctor-meriana-fille-tromp">fille de Tromp</a> sur M&eacute;riana,</li>
+	<li>la renaissance du <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2246423-termine-djaul-nouveau-royaume-ihvari">Royaume d&rsquo;Ihvari</a>, orchestr&eacute;e par Sezario, sur Brumen,</li>
+	<li>une <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2246195-10-fraouctor-21h15-pandore-j-ai-vu-ovni-ciel-monde-douze">histoire d&rsquo;OVNI</a> et un <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2242674-sumens-tournoi-krosmaster-deuxieme-edition-18-jouillier-21h30">tournoi Krosmaster</a> sur Pandore, organis&eacute;s par Tofisy</li>
+	<li>un <a href="https://www.dofus.com/fr/forum/1170-tableau-affichage/2246575-meriana-13-08-647-enlevement-confrerie">enl&egrave;vement</a> &agrave; la Confr&eacute;rie, sur M&eacute;riana, dont serait responsable Cheveux-Danlevent,</li>
+	<li>la cr&eacute;ation de l&rsquo;<a href="https://twitter.com/FrenolneDofus">Entreprise Fr&ecirc;nolne</a> sur Ganym&egrave;de.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<center><img alt="" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-5.png" /></center>
+
+<p>&nbsp;</p>
+En outre, nous aimerions vous reparler d&rsquo;un outil qui est d&eacute;sormais largement utilis&eacute; par la communaut&eacute; RP : le <a href="https://discord.gg/ZcrYTYW">Discord des r&ocirc;listes</a>.
+
+<p>&nbsp;</p>
+
+<p>Il s&rsquo;agit d&rsquo;un formidable support &mdash; et nous pesons nos mots &mdash; au sein duquel peuvent &eacute;changer les animateurs et les r&ocirc;listes. C&rsquo;est ce Discord qui a notamment rendu possible la cr&eacute;ation de l&rsquo;animation du &laquo; Vol des montres &raquo;.</p>
+
+<p>Nous avons r&eacute;cemment accueilli <strong>[Nazkan]</strong>, <strong>[Malvadar-Jandric]</strong> et <strong>[Mal-Jabar]</strong> sur la plateforme. Ces derniers se livrent, &agrave; l&rsquo;occasion, &agrave; des sessions de questions/r&eacute;ponses sur le th&egrave;me du RP et de l&rsquo;&eacute;v&eacute;nementiel. Par ailleurs, un salon priv&eacute; r&eacute;serv&eacute; aux membres du CdS et aux Ma&icirc;tres du Jeu a &eacute;t&eacute; cr&eacute;&eacute; afin de nous permettre de r&eacute;fl&eacute;chir conjointement &agrave; nos diff&eacute;rents projets communs.</p>
+
+<p>Enfin, apprenez &eacute;galement que ce Discord a permis &agrave; l&rsquo;ambassadeur Angom8 d&rsquo;&eacute;tablir la <a href="https://www.dofus.com/fr/forum/1606-ambassadeur/2251764-synthese-voeux-2018">liste des voeux pour 2018</a> de la partie de la communaut&eacute; r&ocirc;liste qui y est repr&eacute;sent&eacute;e&hellip; et qui n&rsquo;attend que vous pour s&rsquo;agrandir !</p>
+
+<h2>LES OBJECTIFS 2018</h2>
+
+<p><strong>Objectif #1:</strong> Nous comptons r&eacute;it&eacute;rer l&rsquo;exp&eacute;rience des &laquo; R&eacute;cits d&rsquo;Invention &raquo; en nous inspirant des diff&eacute;rents retours que vous avez pu formuler &agrave; la suite de cette premi&egrave;re session. Nous ne voulons pas nous emballer, mais il nous semble envisageable de pouvoir organiser trois &agrave; quatre &eacute;ditions par an. Le deuxi&egrave;me volet de cette animation vient juste de commencer, vous pouvez <a href="https://www.dofus.com/fr/forum/1176-bons-conseils-tavernier/2266305-animation-forum-recits-invention-2-reveillez">y participer ici</a>.</p>
+
+<p><strong>Objectif #2:</strong> Gr&acirc;ce au concours de l&rsquo;&eacute;quipe des volontaires au service d&rsquo;Ankama, nous souhaitons braquer un projecteur sur les premiers artisans de l&rsquo;animation en jeu en posant un certain nombre de questions aux Ma&icirc;tres du Jeu. Qu&rsquo;il s&rsquo;agisse de leurs activit&eacute;s en jeu, des coulisses de leurs &eacute;v&eacute;nements, d&rsquo;informations d&eacute;cal&eacute;es, vous pourrez bient&ocirc;t vous familiariser avec ces personnages hauts en couleurs !</p>
+
+<p>&nbsp;</p>
+
+<center><img alt="favoris de shariva" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-19.png" /></center>
+
+<p>&nbsp;</p>
+
+<p><strong>Objectif #3:</strong> Par le biais du fameux Discord des r&ocirc;listes, [Nazkan] nous a fait part de son projet de refonte du CdS : il s&rsquo;agirait, selon ce qu&rsquo;il a pu nous r&eacute;v&eacute;ler de ses envies, de s&rsquo;orienter vers une structure plus ad&eacute;quate, destin&eacute;e &agrave; r&eacute;aliser des projets ponctuels et dont les membres ne seraient plus seulement des organisations comme c&rsquo;est le cas actuellement, mais aussi des joueurs ind&eacute;pendants de celles-ci, et m&ecirc;me pourquoi pas, des individus d&#39;organisations diff&eacute;rentes, de sorte que l&#39;investissement soit valoris&eacute;. <a href="https://www.dofus.com/fr/forum/1137-moderation-animation/1996175-conseil-sadeurs?page=10#entry11981215">Voici l&rsquo;&eacute;change complet</a>. Le changement de mod&egrave;le sera progressif et non brutal ; en outre aucune date n&rsquo;a &eacute;t&eacute; annonc&eacute;e.</p>
+
+<p><strong>Objectif #4:</strong> Nous avons concoct&eacute; une animation en jeu in&eacute;dite destin&eacute;e &agrave; la communaut&eacute;. Elle fera appel aux guildes et aux clans du CdS dans le cadre d&rsquo;une qu&ecirc;te commune et sera probablement organis&eacute;e r&eacute;alis&eacute;e cette ann&eacute;e.</p>
+
+<h2>Les membres du Conseil des Sadeurs</h2>
+
+<p>&nbsp;</p>
+
+<center><img alt="royaume de la brume" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-6.png" /></center>
+
+<p>&nbsp;</p>
+
+<p>Cette ann&eacute;e 2017 aura permis aux Brumeux de satisfaire leur soif d&#39;aventure. En effet, depuis l&rsquo;acquisition de leur quartier g&eacute;n&eacute;ral &agrave; Astrub, les membres du Royaume de la Brume et de sa Patrouille ont toujours dans l&rsquo;id&eacute;e de marquer l&#39;histoire du Monde des Douze de leur empreinte !<br />
+Vous souhaitez nous rendre visite ? Il vous suffit de vous rendre juste au Nord du Manoir Lhambadda, &agrave; Astrub !</p>
+
+<p>Bien s&ucirc;r, cette ambition pr&eacute;sente des risques &hellip; Surtout lorsque ton expert en technomagie n&rsquo;est pas capable de reconna&icirc;tre ton plus haut grad&eacute; et manque de gravement l&rsquo;empoisonner ! Qu&rsquo;importe : &Agrave; vaincre sans p&eacute;ril, on triomphe sans gloire : le Royaume et sa Patrouille r&eacute;pondront toujours &agrave; l&#39;appel. D&#39;ailleurs, cette ann&eacute;e leur aura permis d&#39;acqu&eacute;rir une certaine notori&eacute;t&eacute;.</p>
+
+<p>Il faut dire qu&#39;ils ont pu rencontrer Rosal et participer &agrave; l&#39;enqu&ecirc;te sur l&rsquo;un des grands myst&egrave;res de notre monde : Celui du Voile. Myst&egrave;re r&eacute;solu ou nouveau miracle de la Brume ? Nous laisserons chacun d&eacute;battre de la question, nous avons notre propre avis dessus.</p>
+
+<p>Mais le plus grand succ&egrave;s des fid&egrave;les de la Brume reste sans conteste la r&eacute;paration du bateau menant &agrave; l&rsquo;&icirc;le de Nowel. Organisation et s&eacute;curisation de la collecte des mat&eacute;riaux, enqu&ecirc;te sur les glutins rebelles, combats &agrave; couper le souffle... Le Royaume de la Brume a jou&eacute; un r&ocirc;le primordial dans l&#39;acc&egrave;s &agrave; l&#39;&icirc;le aux cadeaux. Cette belle r&eacute;ussite aura par ailleurs permis au Royaume et &agrave; sa Patrouille d&rsquo;accueillir de nouvelles t&ecirc;tes.</p>
+
+<p>&nbsp;</p>
+
+<center><img alt="" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-18.png" /></center>
+
+<p>&nbsp;</p>
+
+<p>Tout semble donc aller pour le mieux, mais ce serait oublier que depuis qu&rsquo;ils c&ocirc;toient les Favoris, les Brumeux en ont vu de toutes les couleurs. Et le doute commence &agrave; s&rsquo;installer dans leurs esprits : L&rsquo;alliance Brume-Favoris r&eacute;sistera-t-elle ? Les premi&egrave;res tensions entre les deux camps sont apparues lorsque Lutrak a os&eacute; s&#39;opposer &agrave; la folie de Malma Jeste, pour qui la fin justifie forc&eacute;ment les moyens.</p>
+
+<p>Manie-Jance aura bien tent&eacute; de d&eacute;samorcer les troubles, son intervention aura, bien malgr&eacute; elle, donn&eacute; naissance &agrave; de nouvelles disputes : m&eacute;fiant de voir la Favorite de Shariva se rapprocher de son loyal soldat, le g&eacute;n&eacute;ral Mosath a mis Lutrak en garde contre les tours des adeptes du Tumulte... Un avertissement que l&#39;int&eacute;ress&eacute; ne semble pas avoir dig&eacute;r&eacute;. Les ricanements d&#39;Ultiger &agrave; son encontre ne risquent d&#39;ailleurs pas de l&#39;apaiser !</p>
+
+<p>Nul doute que les prochains &eacute;v&eacute;nements de cette ann&eacute;e permettront d&rsquo;en savoir plus sur ces histoires naissantes... ou d&eacute;j&agrave; mourantes ?</p>
+
+<p><a href="http://brume.monalliance.com/forum">Forum</a> - <a href="https://twitter.com/RoyaumeBrume">Twitter</a></p>
+
+<p>&nbsp;</p>
+
+<center><img alt="clan mercenaire nedora riem" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-7.png" /></center>
+
+<p>&nbsp;</p>
+
+<p>Que serait Astrub sans ses mercenaires ? Quoi ? Vous ne connaissez pas les mercenaires ? Ou vous pensiez qu&#39;ils n&#39;existaient plus ?<br />
+Malheureux ! Vous &ecirc;tes bien mal renseign&eacute;s ! Jetez donc cette fausse id&eacute;e, sachez que nous, membres du clan Nedora Riem, sommes bien pr&eacute;sents et avons l&rsquo;intention de le rester encore longtemps. Rendez-nous visite pour d&eacute;poser un contrat ou venez nous voir lors de l&rsquo;une de nos animations de quartier ! Nous vous accueillerons avec joie.</p>
+
+<p>&nbsp;</p>
+
+<center><img alt="quartier general mercenaire nedora riem" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-8.jpg" /></center>
+
+<p>&nbsp;</p>
+
+<p>Durant l&rsquo;ann&eacute;e 647, de nombreux projets ont pu voir le jour, chacun d&rsquo;entre eux permettant de participer activement &agrave; la vie dans le Monde des Douze :</p>
+
+<p>&nbsp;</p>
+
+<center><img alt="quartier general mercenaire nedora riem" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-9.png" /></center>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Grand succ&egrave;s de l&rsquo;&eacute;t&eacute;, les <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2227526-sumens-grands-jeux-nedolympiques">Nedolympiques</a> ont trouv&eacute; leurs vainqueurs ! Nous f&eacute;licitons encore les gagnants : Nilacina pour la premi&egrave;re place, Bernard-Tichaud (Adraphis) pour la seconde place et Niobends pour la troisi&egrave;me place ! Ils ont su imposer leur sup&eacute;riorit&eacute; au cours des quatorze &eacute;preuves &eacute;tal&eacute;es sur trois mois que nous vous avions propos&eacute;es et sachez que nous avons pass&eacute; de tr&egrave;s agr&eacute;ables moments &agrave; vos c&ocirc;t&eacute;s.</li>
+	<li>La Semaine Astrub, journal &agrave; succ&egrave;s qui n&rsquo;est malheureusement plus &eacute;dit&eacute;. Vous pourrez retrouver ses anciennes &eacute;ditions dans nos bureaux !</li>
+	<li>Les animations ponctuelles ne sont pas en reste puisque nous avons pu organiser la <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2255062-pandore-goul-traque">Goul&rsquo;Traque</a> ainsi que les sauvetages de mercenaires &agrave; l&rsquo;&eacute;trange &eacute;v&eacute;nement &ldquo;<a href="http://nedora-riem.forumperso.com/t14629-24-fraouctor-a-21h-le-contrat-le-mercenaire-et-l-assassin">Le contrat, le mercenaire et l&#39;assassin</a>&ldquo;, sans oublier nos traditionnels parties de Mulou-Garou parfois remani&eacute;es &agrave; la sauce d&rsquo;Halouine ou de Nowel. R&eacute;cemment, le clan a travaill&eacute; avec les Favoris pour ce qui semble &ecirc;tre <a href="https://www.dofus.com/fr/forum/1264-animations-maitres-jeu/2263756-6-javian-pandore-premices-nowel-skell-jackington">Les pr&eacute;mices du Nowel de Skell Jackington</a>, sauvant les f&ecirc;tes de fin d&#39;ann&eacute;e par la m&ecirc;me occasion.</li>
+	<li>Nous avons aussi simplifi&eacute; la structure interne du clan pour que les candidats au poste de mercenaire puissent entrer directement en tutelle afin d&rsquo;apprendre &agrave; devenir un porteur de Lonne d&rsquo;&eacute;lite &agrave; part enti&egrave;re !</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<center><img alt="les grands jeux nedolympiques" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-10.jpg" /></center>
+
+<p>&nbsp;</p>
+
+<p>Sachez &eacute;galement que des &eacute;v&egrave;nements sont &agrave; venir dans le clan ! Des animations toujours, et, plus pr&eacute;cis&eacute;ment, l&rsquo;&eacute;dition 648 des Nedolympiques qui fera son arriv&eacute;e &agrave; la fin du printemps !</p>
+
+<p>De plus, l&rsquo;ann&eacute;e 648 voit na&icirc;tre quelques projets qui pourraient bien aboutir avant la fin de l&rsquo;ann&eacute;e :</p>
+
+<center><img alt="" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-11.png" /></center>
+
+<ul>
+	<li>La Congr&eacute;gation pour les Avanc&eacute;es Fondamentales, organisation ayant pour but principal des d&eacute;couvertes technomagiques, devrait prochainement ouvrir ses portes afin d&rsquo;&eacute;changer avec vous au sujet de ses recherches.</li>
+	<li>Des travaux en collaboration avec les autres clans du Conseil des Sadeurs et m&ecirc;me les Favoris de Shariva pour faire aller de l&rsquo;avant le Conseil du m&ecirc;me nom.</li>
+	<li>Les mercenaires d&eacute;sirent de plus en plus travailler ailleurs que sur leur place de pr&eacute;dilection, vous pourrez en croiser en-dehors d&rsquo;Astrub et m&ecirc;me les accompagner en terrain inconnu avec les Contrats du Comte Goutte !</li>
+	<li>Un possible retour des Semaines du Mercenariat avec une treizi&egrave;me &eacute;dition !</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<center><img alt="la semaine du mercenaire" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-12.png" /></center>
+
+<p>&nbsp;</p>
+
+<p>Si ceci vous a intrigu&eacute;s ou si vous &ecirc;tes int&eacute;ress&eacute;s par le mercenariat, rendez-nous visite en [1,-19] dans Astrub. Nous vous accueillerons avec grand plaisir !</p>
+
+<p><a href="http://nedora-riem.forumperso.com/">Forum</a> - <a href="https://twitter.com/CNedoraRiem">Twitter</a></p>
+
+<p>&nbsp;</p>
+
+<center><img alt="la main du valet noir" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-13.png" /></center>
+
+<p>&nbsp;</p>
+
+<p>Eh bien, quelle ann&eacute;e ! De neuf depuis la derni&egrave;re Lettre des Sadeurs, il y a eu notre <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2232566-agride-marquis-recoit-main-valet-noir">intronisation officielle</a> au sein du CdS au mois de mai dernier. Un &eacute;v&eacute;nement dont nous avons tir&eacute; un bilan (tr&egrave;s) positif, puisque nous avons pos&eacute; les bases d&rsquo;une relation durable avec les Favoris. Il faut aussi &eacute;voquer, dans l&rsquo;ordre, l&rsquo;innovant <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2223032-event-forum-pyrocluedo">Pyrocluedo</a>, l&rsquo;agridienne <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2245664-agride-carriere-monsieur-roche">carri&egrave;re de Monsieur Roche</a> ainsi que les nocturnes sessions de <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2242153-agride-parure-parjures">Parure des Parjures</a> !</p>
+
+<p>Et dites-vous bien que ces animations ne repr&eacute;sentent que la partie &eacute;merg&eacute;e de l&rsquo;iceberg rolistico-&eacute;v&eacute;nementiel de la Main du Valet Noir, car nous taisons ici les nombreuses qu&ecirc;tes internes, qu&rsquo;elles soient initiatiques, mineures, voire m&ecirc;me majeures, et qui contribuent &agrave; approfondir, construire et &eacute;toffer le background de nos personnages respectifs ainsi que celui de notre organisation. Chez nous, il y en a pour tous les go&ucirc;ts, dira-t-on. Que vous soyez adeptes du roleplay (RP) en jeu, de l&rsquo;improvisation, des enqu&ecirc;tes, des &eacute;nigmes et du myst&egrave;re ou des sessions, plus &eacute;tal&eacute;es dans le temps, de RP sur forum&hellip;</p>
+
+<p>Mais faisons fi du pass&eacute; et focalisons-nous sur l&rsquo;avenir ! Ces prochains temps, nous projetons de tisser des liens &laquo; particuliers &raquo; avec d&rsquo;autres organisations membres du Conseil des Sadeurs. Il se pourrait m&ecirc;me que vous nous croisiez ailleurs que sur Agride, au d&eacute;tour d&rsquo;un bal ou deux&hellip;</p>
+
+<p>Si les festivit&eacute;s, la danse et les d&eacute;guisements ne sont pas votre tasse de th&eacute;, rassurez-vous, des activit&eacute;s plus physiques vous attendront sur le serveur au b&ucirc;cheron barbu. A commencer par une immersion dans les coulisses du fameux Ring aux Etoiles !</p>
+
+<p>Pour finir de vous donner un aper&ccedil;u de ce d&eacute;but d&rsquo;ann&eacute;e 2018, attendez-vous &agrave; voir surgir la suite d&rsquo;une animation qui avait fait notre fiert&eacute; l&rsquo;ann&eacute;e derni&egrave;re et qui s&rsquo;&eacute;tait achev&eacute;e sur une objection tonitruante&hellip;</p>
+
+<div class="ak-big-image template_block">
+<center><img alt="" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-14.jpg" />
+<div class="ak-big-image-legend template_block_element">Liste des membres de la Main du Valet Noir</div>
+</center>
+</div>
+
+<p><a href="http://valet-noir.forumactif.org/">Forum</a> - <a href="https://twitter.com/Le_Valet_Noir">Twitter</a></p>
+
+<p>&nbsp;</p>
+
+<center><img alt="clan de lyre ehel" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-15.png" /></center>
+
+<p>&nbsp;</p>
+
+<p>C&rsquo;est apr&egrave;s une bonne ann&eacute;e de discussions et de d&eacute;bats que nous avons enfin franchi le pas et envoy&eacute; notre gros parchemin de candidature au Conseil des Sadeurs. De longs mois se sont &eacute;coul&eacute;s entre l&#39;envoi de la candidature et notre entr&eacute;e au Conseil ; il se trouve que nous avons postul&eacute; juste apr&egrave;s l&#39;arriv&eacute;e de [Nazkan]. Ce dernier souhaitait entamer une refonte du Conseil, et nous a donc propos&eacute; de mettre notre candidature en gel le temps que les modifications passent.<br />
+Les choses ont fait que la refonte n&#39;a pas eu le temps d&#39;&ecirc;tre impl&eacute;ment&eacute;e, d&#39;o&ugrave; la dur&eacute;e de traitement de notre candidature. Enfin est venu le moment de la d&eacute;livrance annonc&eacute;e par [Malvadar-Jandric] un bel apr&egrave;s-midi. Nous sommes ravis d&rsquo;avoir &eacute;t&eacute; accept&eacute;s et de faire partie du Conseil, c&rsquo;est vraiment une belle opportunit&eacute; pour notre clan !</p>
+
+<p>Nous esp&eacute;rons que le Conseil permettra &agrave; notre groupe de gagner en visibilit&eacute;, de se renouveler et de continuer &agrave; proposer des animations, cette fois avec certainement plus d&rsquo;ampleur. Nous avons envie d&rsquo;oeuvrer pour la p&eacute;rennit&eacute; et l&rsquo;activit&eacute; du Conseil mais &eacute;galement d&rsquo;&ecirc;tre des acteurs essentiels pour le d&eacute;veloppement du roleplay sur Dofus !</p>
+
+<center><img alt="" class="img-responsive" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-16.png" /></center>
+
+<p>Cr&eacute;&eacute; sur Helsephine en 644, le <a href="https://www.dofus.com/fr/forum/1610-divers/2252504-rp-clan-lyre-ehel">Clan de Lyre Ehel</a> est d&eacute;sormais install&eacute; sur le serveur Ush. Nous ne sommes pas une guilde ce qui signifie qu&rsquo;il est tout &agrave; fait possible de rejoindre nos rangs sans avoir &agrave; tourner le dos &agrave; ses compagnons de jeu. Nous souhaitons d&eacute;velopper la pratique du roleplay et amuser nos compagnons de jeu sur Ush.</p>
+
+<p>En ce qui concerne le premier trimestre de 2018, nous vous avons pr&eacute;par&eacute; de bien belles choses et cela a d&eacute;j&agrave; commenc&eacute;. En effet, le 6 janvier nous avons eu notre <a href="https://www.dofus.com/fr/forum/1264-animations-maitres-jeu/2263618-6-javian-ush-glutins-mutins-partie-2">premi&egrave;re animation</a> avec les Ma&icirc;tres du Jeu en tant que membres du Conseil. Cette aventure nous a permis d&rsquo;affirmer les liens entre le Conseil et le Clan et de gagner un peu de visibilit&eacute; sur Ush. En lien avec cette animation, le 28 janvier, vous avez peut-&ecirc;tre eu l&rsquo;occasion d&rsquo;assister &agrave; notre bal de l&rsquo;ann&eacute;e : <a href="https://www.dofus.com/fr/forum/1266-animations-sadeurs/2265217-ush-28-01-grand-bal-annuel-comte-hancieux">le Grand Bal Annuel du Comte Hancieux</a>. Nous attendons &eacute;galement avec une grande impatience l&rsquo;animation de notre intronisation au conseil. Au cours de l&rsquo;ann&eacute;e, nous aurons bien d&rsquo;autres surprises pour vous ! Gardez bien nos actualit&eacute;s &agrave; l&rsquo;oeil.</p>
+
+<p>Nous vous invitons sur notre forum pour d&eacute;couvrir notre histoire, notre mode de fonctionnement et de recrutement !</p>
+
+<p>Tout cela n&rsquo;est qu&rsquo;un d&eacute;but mais on vous promet une suite bien tumultueuse. Shariva n&rsquo;a pas fini de rire !</p>
+
+<p><a href="http://lyre-ehel.forumofficiel.fr/">Forum</a> - <a href="https://twitter.com/LyreEhel">Twitter</a></p>
+
+<center><img alt="conseil des sadeurs" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/02_2018/lettresadeur3-17.png" /></center>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/842065-lettre-sadeurs-3]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Fri, 02 Feb 2018 11:00:00 +0200</pubDate>
+                <guid isPermaLink="false">640f51de87fde2122543222030905cb0</guid>
+      </item>
+          <item>
+        <title><![CDATA[Modification du système d'agression des monstres]]></title>
+        <description><![CDATA[<div style="text-align: justify;">La zone d&#39;agression des monstres a &eacute;t&eacute; progressivement r&eacute;duite au fil des ann&eacute;es (jusqu&#39;&agrave; atteindre une seule cellule autour des monstres), mais la m&eacute;canique d&#39;agression des monstres n&#39;a pas &eacute;volu&eacute; depuis la sortie du jeu.&nbsp;La mise &agrave; jour 2.45 introduira un nouveau syst&egrave;me de gestion de l&#39;agression des monstres que nous souhaitons plus facile appr&eacute;hender et moins frustrant.</div>
+ <div class="ak-big-image template_block"><img alt="" class="img-responsive" height="531" src="	https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/11_2017/ng-devblog-syste-me-d-agression.jpg" width="950" /></div>
+
+<h2>Objectif principal : valoriser l&#39;exploration</h2>
+
+<p style="text-align: justify;">L&#39;agression des monstres est g&eacute;n&eacute;ralement per&ccedil;ue dans DOFUS comme une contrainte inutile. Si son application actuelle est contestable, nous consid&eacute;rons cependant qu&#39;un bon syst&egrave;me d&#39;agression des monstres est une m&eacute;canique de jeu int&eacute;ressante.</p>
+
+<p style="text-align: justify;">DOFUS propose un monde ouvert dans lequel les personnages peuvent se d&eacute;placer librement sans contraintes strictes (il y a par exemple tr&egrave;s peu de restrictions de niveaux pour acc&eacute;der aux zones). L&#39;exploration est cependant difficile &agrave; valoriser lorsque des personnages peuvent se d&eacute;placer d&egrave;s le d&eacute;but du jeu dans n&#39;importe quelle zone. Nous appr&eacute;cions l&#39;id&eacute;e que certaines zones puissent &ecirc;tre dangereuses pour des personnages d&eacute;butants, qu&#39;ils puissent s&#39;y aventurer &agrave; leurs risques et p&eacute;rils et qu&#39;au fur et &agrave; mesure, en gagnant des niveaux, ils deviennent assez puissants pour s&#39;aventurer dans des zones de plus en plus dangereuses.</p>
+
+<p style="text-align: justify;">Des zones dangereuses pour les personnages de faible ou moyenne puissance permettent de garantir une d&eacute;couverte des zones plus progressive. Elles permettent &eacute;galement de nous assurer que n&#39;importe quel personnage ne puisse pas sans difficult&eacute; suppl&eacute;mentaire acc&eacute;der &agrave; des qu&ecirc;tes ou ressources que nous souhaitons rendre disponibles en priorit&eacute; aux personnages de plus haut niveau.</p>
+
+<p style="text-align: justify;">Nous souhaitons &eacute;viter au maximum que les zones aient des contraintes d&#39;acc&egrave;s strictes reposant sur les niveaux des personnages, nous pr&eacute;f&eacute;rons que la quasi-totalit&eacute; des zones soient accessibles &agrave; l&#39;ensemble des personnages s&#39;ils sont pr&ecirc;ts &agrave; prendre des risques.</p>
+
+<h2>Fonctionnement</h2>
+
+<p style="text-align: justify;">Nous avons voulu rendre le syst&egrave;me d&#39;agression plus dynamique, ce sont d&eacute;sormais les personnages statiques qui seront en danger et courir sera la solution la plus adapt&eacute;e pour &eacute;viter les agressions de monstres.</p>
+
+<p style="text-align: justify;">L&#39;agression par un monstre se d&eacute;roule d&eacute;sormais de la fa&ccedil;on suivante :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt"><strong>D&eacute;tection</strong> : les monstres ont une zone de vision (entre 2 et 4 cases, ces param&egrave;tres peuvent encore &eacute;voluer). Lorsqu&#39;un personnage entre dans cette zone de vision, l&#39;agression pourra devenir possible.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt"><strong>&Eacute;valuation</strong> : par d&eacute;faut, la quasi-totalit&eacute; les monstres du jeu pourra agresser des personnages si l&#39;&eacute;cart de niveau entre le monstre et le personnage est trop important. Si cet &eacute;cart est sup&eacute;rieur &agrave; 50 niveaux, le monstre tentera de d&#39;agresser le personnage (par exemple un monstre de niveau 140 tentera d&#39;agresser un personnage de niveau 80). Cet &eacute;cart de niveau pourra &eacute;voluer en fonction des tests que nous effectuerons et de vos retours.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt"><strong>Tentative d&#39;agression</strong> : si la condition d&#39;&eacute;valuation de la cible est remplie et si le personnage est dans la zone de vision du monstre pendant plus de 3 secondes (donc &agrave; quelques cellules de lui), alors le combat sera lanc&eacute;. D&egrave;s qu&#39;un monstre rep&egrave;re une cible potentielle qu&#39;il pourrait agresser, un petit symbole s&#39;affiche au-dessus de lui afin de pr&eacute;venir les joueurs qu&#39;il est de temps de se sauver ! C&#39;est le chef du groupe de monstres qui g&egrave;re la zone de vision pour les agressions.</span></li>
+</ul>
+
+<div style="text-align: justify;">
+<div style="text-align:center"><img alt="" height="432" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/devblog/11_2017/monster-aggro-devblog.gif" width="725" /></div>
+<br />
+&nbsp;</div>
+
+<p style="text-align: justify;">Un personnage mobile devrait donc &eacute;viter facilement les agressions. Ce fonctionnement plus souple est assum&eacute;, ce nouveau syst&egrave;me permet de rendre dangereuses les zones dans lesquelles les personnages ne sont pas assez attentifs et les zones dans lesquelles les personnages ne sont pas cens&eacute;s se trouver (&eacute;cart de niveau trop important entre les monstres et le personnage).</p>
+
+<p style="text-align: justify;">Ce fonctionnement r&egrave;gle les soucis que les joueurs pouvaient rencontrer dans les tunnels et zones &eacute;troites, il ne sera plus n&eacute;cessaire d&#39;attendre que les monstres se d&eacute;placent, il faudra avant tout ne pas rester immobile trop longtemps sur une carte si les monstres pr&eacute;sents peuvent agresser votre personnage.</p>
+
+<p style="text-align: justify;">Lorsqu&#39;un groupe de monstres pourra th&eacute;oriquement agresser votre personnage, un symbole sp&eacute;cifique sera affich&eacute; au survol du groupe de monstres.<br />
+&nbsp;</p>
+
+<center><img alt="" height="429" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/devblog/11_2017/monster-aggro-devblog2.gif" width="723" />
+<p>&nbsp;</p>
+</center>
+
+<h2 style="text-align: justify;">Monstres tr&egrave;s agressifs</h2>
+
+<p style="text-align: justify;">Certains monstres resteront agressifs en permanence (les Wabbits ou les Bworks par exemple), quel que soit le niveau du personnage. Ce fonctionnement sera utilis&eacute; dans les zones o&ugrave; nous souhaitons que l&#39;exploration soit plus difficile et dangereuse.<br />
+La majorit&eacute; des monstres ne seront agressifs qu&#39;envers les personnages dont le niveau est beaucoup trop faible par rapport au niveau de la zone. Ce fonctionnement nous permet de d&eacute;courager (sans interdire) l&#39;exploration de zones qui ne sont pas adapt&eacute;es &agrave; la puissance du personnage.</p>
+
+<p style="text-align: justify;">Avec les param&egrave;tres actuels (r&egrave;gle des 50 niveaux d&#39;&eacute;cart entre monstres et personnages pour d&eacute;clencher les agressions), les personnages de niveau 150 et plus ne seront donc pas agress&eacute;s par la majorit&eacute; des monstres classiques.<br />
+&nbsp;</p>
+
+<h2 style="text-align: justify;">D&eacute;placement des monstres</h2>
+
+<p style="text-align: justify;">Le comportement des monstres en dehors des combat sera lui aussi modifi&eacute;, les monstres tenteront progressivement (mais lentement) de se rapprocher des personnages pr&eacute;sents sur la carte. Il faudra donc faire attention &agrave; ne pas rester immobile trop longtemps sur une carte comprenant des monstres pouvant agresser votre personnage. La fr&eacute;quence &agrave; laquelle les monstres se d&eacute;placent en dehors des combats n&#39;est pas modifi&eacute;e.<br />
+&nbsp;</p>
+
+<h2 style="text-align: justify;">&Eacute;volutions</h2>
+
+<p style="text-align: justify;">Les param&egrave;tres d&eacute;crits dans cet article pourront &eacute;voluer au cours des tests que vous effectuerez lors de la b&ecirc;ta 2.45.<br />
+N&#39;h&eacute;sitez pas &agrave; partager vos retours d&#39;exp&eacute;rience sur ce nouveau syst&egrave;me.<br />
+&nbsp;</p>
+
+<h2 style="text-align: justify;">Questions</h2>
+&nbsp;
+
+<h3 style="text-align: justify;">Les r&eacute;coltes peuvent-elles &ecirc;tre interrompues ?</h3>
+
+<p style="text-align: justify;">Les r&eacute;coltes pourront &ecirc;tre interrompues par l&#39;agression des monstres, il faudra faire attention lorsque vous enverrez un personnage de faible niveau collecter des ressources dans des zones d&#39;un niveau largement sup&eacute;rieur.<br />
+Le d&eacute;lai entre le rep&eacute;rage par un monstre et le d&eacute;clenchement de l&#39;agression devrait cependant permettre aux r&eacute;colteurs les plus attentifs de pouvoir &eacute;viter la majorit&eacute; des agressions.<br />
+Nous permettons aux monstres agressifs d&#39;interrompre les r&eacute;coltes afin d&#39;&eacute;viter que des personnages (utilisant la file d&#39;actions) ne puissent r&eacute;colter en toute impunit&eacute; sur des cartes comprenant des monstres qui devraient les agresser.<br />
+&nbsp;</p>
+
+<h3 style="text-align: justify;">Pourquoi ne pas proposer une invuln&eacute;rabilit&eacute; aux agressions des monstres via des consommables ou des Succ&egrave;s ?</h3>
+
+<p style="text-align: justify;">Nous consid&eacute;rons que l&#39;agression des monstres peut &ecirc;tre utilis&eacute;e comme une m&eacute;canique pour valoriser l&#39;exploration. Nous ne souhaitons pas que certains personnages puissent s&#39;y soustraire totalement dans les zones o&ugrave; nous souhaitons qu&#39;elle s&#39;applique syst&eacute;matiquement.<br />
+Nous n&#39;excluons pas la possibilit&eacute; d&#39;exploiter &agrave; long terme les Succ&egrave;s ou des consommables pour se prot&eacute;ger des agressions, mais nous ne souhaitons pas en faire des m&eacute;canismes g&eacute;n&eacute;riques.<br />
+&nbsp;</p>
+
+<h3 style="text-align: justify;">Comment les monstres choisissent les personnages &agrave; agresser ?</h3>
+
+<p style="text-align: justify;">Un monstre peut rep&eacute;rer plusieurs personnages &agrave; agresser dans son champ de vision, il attaquera alors en priorit&eacute; le premier personnage qu&#39;il aura aper&ccedil;u et en cas d&#39;&eacute;galit&eacute; il s&#39;attaquera au personnage dont le niveau est le plus faible. Il para&icirc;t que les mules sont plus tendres :]</p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/795607-modification-systeme-agression-monstres]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Tue, 14 Nov 2017 18:00:00 +0200</pubDate>
+                <guid isPermaLink="false">499e72164110efd6280cc34d7b19e8b3</guid>
+      </item>
+          <item>
+        <title><![CDATA[Niveaux Oméga]]></title>
+        <description><![CDATA[<p>Avec la mise &agrave; jour 2.45, nous ajoutons un nouveau syst&egrave;me de niveaux Om&eacute;ga afin de proposer une nouvelle forme de progression pour les personnages apr&egrave;s le niveau 200.</p>
+ <div class="ak-big-image template_block"><img alt="" class="img-responsive" height="531" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/www/11_2017/ng-devblog-omega.jpg" width="950" /></div>
+
+<h2 class="fake" style="text-align: justify;">Objectifs</h2>
+
+<p style="text-align: justify;">Voici les objectifs de ce nouveau syst&egrave;me :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Proposer une progression infinie apr&egrave;s le niveau 200.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Mettre en valeur via des r&eacute;compenses cosm&eacute;tiques les gains d&#39;exp&eacute;rience apr&egrave;s le niveau 200.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Proposer des bonus utilitaires pour les gains de niveaux Om&eacute;ga.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Ne pas augmenter la puissance des personnages apr&egrave;s le niveau 200.</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h2 style="text-align: justify;">Fonctionnement</h2>
+
+<p style="text-align: justify;">Une fois le niveau 200 atteint, votre personnage d&eacute;bloquera une nouvelle jauge de progression (les niveaux Om&eacute;ga).<br />
+Ces niveaux n&#39;augmenteront pas la puissance des personnages mais permettront de d&eacute;bloquer des r&eacute;compenses cosm&eacute;tiques et utilitaires.</p>
+
+<p style="text-align: justify;">Ces niveaux n&#39;ont pas de limite, ils seront &quot;rapides&quot; &agrave; d&eacute;bloquer au d&eacute;but mais demanderont progressivement de plus en plus d&#39;exp&eacute;rience.</p>
+
+<p style="text-align: justify;">Les bonus de personnages secondaires s&#39;appliqueront pour les niveaux Om&eacute;ga. Par exemple, si vous avez sur le m&ecirc;me compte un personnage A de niveau Om&eacute;ga 50 alors votre personnage B de niveau Om&eacute;ga 10 aura des gains d&#39;exp&eacute;rience doubl&eacute;s jusqu&#39;&agrave; ce qu&#39;il atteigne le niveau Om&eacute;ga 50.<br />
+&nbsp;</p>
+
+<h2 style="text-align: justify;">R&eacute;compenses cosm&eacute;tiques</h2>
+
+<p style="text-align: justify;">Les personnages pourront d&eacute;bloquer deux types de r&eacute;compenses &agrave; certains niveaux Om&eacute;ga : des Ornements et des Auras.<br />
+&nbsp;</p>
+
+<center>
+<div style="text-align:center"><img alt="" height="557" src="https://s.ankama.com/www/static.ankama.com/comm/news/dofus/devblog/11_2017/omega-ornaments-devblog.gif" width="496" /></div>
+</center>
+
+<p style="text-align: justify;">Les niveaux Om&eacute;ga des personnages seront visibles en jeu au survol des personnages (cette option pourra &ecirc;tre d&eacute;sactiv&eacute;e) ainsi que dans la majorit&eacute; des interfaces sociales.<br />
+&nbsp;</p>
+
+<h2 style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">R&eacute;compenses utilitaires</span></span></h2>
+
+<p style="text-align: justify;">Pour chaque niveau Om&eacute;ga, les personnages gagneront des bonus utilitaires (sans impact sur les combats) :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">5 pods</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">1 emplacement dans les h&ocirc;tels de ventes</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">1 emplacement dans les magasins de modes marchand</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h2 style="text-align: justify;">Conversion des gains d&#39;exp&eacute;rience ant&eacute;rieurs</h2>
+
+<p style="text-align: justify;">Les points d&#39;exp&eacute;rience accumul&eacute;s apr&egrave;s le niveau 200 jusqu&#39;&agrave; la sortie de la mise &agrave; jour 2.45 seront convertis dans la jauge Om&eacute;ga.</p>
+
+<p style="text-align: justify;">Lors du lancement de la version 2.45, les personnages qui auront au pr&eacute;alable continu&eacute; d&#39;accumuler de l&#39;exp&eacute;rience apr&egrave;s le niveau 200 atteindront potentiellement un niveau Om&eacute;ga X d&egrave;s leur premi&egrave;re connexion.</p>
+
+<p style="text-align: justify;">Nous avons privil&eacute;gi&eacute; la conversion des gains d&#39;exp&eacute;rience ant&eacute;rieurs pour plusieurs raisons :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les niveaux Om&eacute;ga apportent des bonus utilitaires et cosm&eacute;tiques, ils ne vont pas rendre certains personnages (avec &eacute;norm&eacute;ment d&#39;exp&eacute;rience) plus puissants que d&#39;autres.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Ces niveaux sont illimit&eacute;s, il n&#39;y a pas de risque qu&#39;&agrave; la sortie de la mise &agrave; jour 2.45, certains personnages aient d&eacute;j&agrave; atteint le niveau Om&eacute;ga maximum.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Nous ne pr&eacute;voyons pas d&#39;enjeu comp&eacute;titif autour des niveaux Om&eacute;ga, nous n&#39;avons donc pas de raison particuli&egrave;re de vouloir faire commencer l&#39;ensemble des joueurs au niveau Om&eacute;ga 0.</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h2 style="text-align: justify;">Questions et r&eacute;ponses</h2>
+&nbsp;
+
+<h3 style="text-align: justify;">Pr&eacute;voyez-vous une comp&eacute;tition ou des r&eacute;compenses sp&eacute;cifiques pour les personnages ayant les niveaux Om&eacute;ga les plus &eacute;lev&eacute;s ?</h3>
+
+<div style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">Nous ne pr&eacute;voyons pas de comp&eacute;tition autour des niveaux Om&eacute;ga (en dehors des classements d&#39;exp&eacute;rience d&eacute;j&agrave; pr&eacute;sents sur le site officiel) ni de r&eacute;compense sp&eacute;cifique pour les personnages ayant les niveaux Om&eacute;ga les plus &eacute;lev&eacute;s.<br />
+Les m&eacute;thodes les plus efficaces pour gagner &eacute;norm&eacute;ment d&#39;exp&eacute;rience reposent g&eacute;n&eacute;ralement sur une utilisation extensive de plusieurs comptes et sur une r&eacute;p&eacute;tition &quot;industrielle&quot; de contenus identiques (m&ecirc;mes donjons avec des compositions de classes fixes pour maximiser les gains par exemple).<br />
+Nous ne souhaitons pas encourager la pratique de ces m&eacute;thodes en </span></span>les mettant particuli&egrave;rement en avant via une comp&eacute;tition et des r&eacute;compenses exclusives.<br />
+Id&eacute;alement, nous aimerions que les m&eacute;thodes les plus efficaces pour maximiser les gains d&#39;exp&eacute;rience dans DOFUS soient beaucoup plus &quot;saines&quot;, mais nous ne sommes pas en mesure d&#39;y parvenir &agrave; court ou moyen terme. Il s&#39;agit pour nous d&#39;un objectif &agrave; tr&egrave;s long terme, que nous avons d&eacute;j&agrave; commenc&eacute; &agrave; aborder via les placements dynamiques en d&eacute;but de combat et la diversification des m&eacute;thodes pour gagner de l&#39;exp&eacute;rience.<br />
+&nbsp;</div>
+
+<h3 style="text-align: justify;"><span style="font-size:12.0pt">Est-ce qu&#39;il y aura des Succ&egrave;s pour l&#39;atteinte des niveaux</span> <span style="font-size:12.0pt">Om&eacute;ga ?</span></h3>
+
+<p style="text-align: justify;">Nous ne pr&eacute;voyons pas d&#39;ajouter de Succ&egrave;s pour l&#39;atteinte des niveaux Om&eacute;ga. Nous estimons que les Succ&egrave;s actuels qui r&eacute;compensent l&#39;atteinte des niveaux classiques sont suffisants et nous pr&eacute;f&eacute;rons r&eacute;server les Succ&egrave;s aux activit&eacute;s les plus m&eacute;ritoires (compl&eacute;tion des contenus et contenus proposant une augmentation de la difficult&eacute;).<br />
+&nbsp;</p>
+
+<h3 style="text-align: justify;"><span style="font-size:12.0pt">Pr&eacute;voyez-vous d&#39;introduire des bonus de puissance pour les</span> <span style="font-size:12.0pt">niveaux Om&eacute;ga ?</span></h3>
+
+<p style="text-align: justify;">Nous ne souhaitons pas introduire de puissance suppl&eacute;mentaire avec les niveaux Om&eacute;ga, &agrave; court, moyen ou long terme. Comme pour les variantes de sorts qui s&#39;obtiendront entre les niveaux 100 et 200, nous ne souhaitons pas qu&#39;un investissement consid&eacute;rable en exp&eacute;rience apr&egrave;s le niveau 200 soit n&eacute;cessaire pour optimiser son personnage.<br />
+Nous consid&eacute;rons que l&#39;atteinte du niveau 200 pour des nouveaux joueurs qui progressent &quot;normalement&quot; (sans multicompte et sans aide externe) est suffisamment longue.</p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/795601-niveaux-omega]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Tue, 14 Nov 2017 16:30:00 +0200</pubDate>
+                <guid isPermaLink="false">ce6a9897504a6e30479ea6c3c2527cfb</guid>
+      </item>
+          <item>
+        <title><![CDATA[Refonte Sacrieur 2.45]]></title>
+        <description><![CDATA[L&rsquo;ann&eacute;e derni&egrave;re, &agrave; la m&ecirc;me p&eacute;riode, nous avons effectu&eacute; une refonte des sorts du Sacrieur&nbsp;: suppression de la voie Terre, r&eacute;organisation des sorts &eacute;l&eacute;mentaires et modification des ch&acirc;timents qui gagnent en efficacit&eacute; si le Sacrieur a moins de 50% de sa vie. <div class="ak-big-image template_block"><img alt="" class="img-responsive" height="531" src="https://s.ankama.com/www/static.ankama.com/ankama/cms/images/273/2016/11/14/588215.jpg" width="950" /></div>
+
+<p class="fake" style="text-align: justify;">Nous avons malheureusement rapidement r&eacute;alis&eacute; que ces modifications sur le Sacrieur (notamment celles sur les Ch&acirc;timents) posaient quelques probl&egrave;mes :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Le Sacrieur pouvait changer de Ch&acirc;timent plusieurs fois par tour, lui permettant de cumuler plusieurs r&ocirc;les facilement.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Le syst&egrave;me qui demande au Sacrieur d&rsquo;&ecirc;tre &agrave; moins de la moiti&eacute; de sa vie pour profiter des Ch&acirc;timents &agrave; puissance maximale &eacute;tait peu intuitif et g&eacute;n&eacute;rait un effet palier trop important.</span></li>
+</ul>
+
+<p style="text-align: justify;">Pour ces raisons, nous avons appliqu&eacute; d&#39;importantes modifications dans le fonctionnement des Ch&acirc;timents en avril dernier en les d&eacute;corr&eacute;lant de la Vitalit&eacute; du Sacrieur et en appliquant un bonus progressif sur plusieurs tours.<br />
+Cette mise &agrave; jour nous a permis de fournir une am&eacute;lioration significative de la classe sans avoir &agrave; revoir en profondeur l&rsquo;int&eacute;gralit&eacute; des sorts : elle a rendu le fonctionnement de la classe plus sain en s&eacute;parant mieux les diff&eacute;rents r&ocirc;les que peut jouer le Sacrieur.</p>
+
+<p style="text-align: justify;">Elle a cependant &eacute;loign&eacute; davantage la classe de ce qui faisait auparavant ses sp&eacute;cificit&eacute;s : notamment son c&ocirc;t&eacute; &laquo; Berzerker &raquo; et la possibilit&eacute; de pouvoir g&eacute;rer et utiliser &agrave; bon escient sa Vitalit&eacute;.</p>
+
+<p style="text-align: justify;">Lors de la cr&eacute;ation des variantes de sorts (et cela s&rsquo;applique pour toutes les classes), nous ne voulions pas utiliser comme base des sorts et des m&eacute;caniques qui ne nous satisfaisaient pas.</p>
+
+<p style="text-align: justify;">Pour cette raison nous avons souhait&eacute; assainir les sorts Sacrieur avant de nous attaquer &agrave; leurs variantes.</p>
+
+<h2 style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">La refonte</span></span></h2>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<p style="text-align: justify;">Nous avons donc entrepris une nouvelle refonte de la classe Sacrieur.</p>
+
+<p style="text-align: justify;">Cette refonte a pour objectifs de rendre plus coh&eacute;rente la classe vis-&agrave;-vis de ce qu&rsquo;elle est cens&eacute;e &ecirc;tre (son identit&eacute; de classe Berzerker), tout en am&eacute;liorant le fonctionnement de certaines m&eacute;caniques.<br />
+&nbsp;</p>
+
+<h3 style="text-align: justify;">Le sort des Ch&acirc;timents</h3>
+
+<p style="text-align: justify;">Les Ch&acirc;timents ont toujours &eacute;t&eacute; une pierre angulaire dans le panel des sorts Sacrieur. L&rsquo;ann&eacute;e derni&egrave;re, nous avons r&eacute;duit leur nombre &agrave; 3 : le V&eacute;loce pour la mobilit&eacute;, le Robuste pour l&rsquo;encaisse, le Sanguinaire pour les dommages.</p>
+
+<p style="text-align: justify;">Aujourd&rsquo;hui, nous souhaitons laisser derri&egrave;re nous ces vestiges du pass&eacute; : le syst&egrave;me de Ch&acirc;timent est supprim&eacute;.<br />
+&nbsp;</p>
+
+<h3 style="text-align: justify;">Souffrance = Puissance</h3>
+
+<p style="text-align: justify;">Nous le rempla&ccedil;ons par un syst&egrave;me de &laquo; Souffrance &raquo; :</p>
+
+<ul>
+	<li style="text-align: justify;">
+	<p><span style="tab-stops:list 36.0pt">Plus le Sacrieur accumule de la Souffrance, moins il a de vie mais plus il occasionne des dommages.</span></p>
+	</li>
+	<li style="text-align: justify;">
+	<p><span style="tab-stops:list 36.0pt">Moins il a de Souffrance, plus il a de vie et plus il r&eacute;duit les dommages subis.</span><br />
+	&nbsp;</p>
+	</li>
+</ul>
+
+<p style="text-align: justify;">En fonction des sorts qu&rsquo;il utilise, le Sacrieur va pouvoir augmenter ou r&eacute;duire sa Souffrance. Son niveau de Souffrance est d&eacute;termin&eacute; par les sorts qu&rsquo;il utilise :</p>
+
+<ul>
+	<li style="text-align: justify;">
+	<p><span style="tab-stops:list 36.0pt">Les sorts &eacute;l&eacute;mentaires tr&egrave;s offensifs augmentent sa Souffrance.</span></p>
+	</li>
+	<li style="text-align: justify;">
+	<p><span style="tab-stops:list 36.0pt">Les sorts &eacute;l&eacute;mentaires d&eacute;fensifs r&eacute;duisent sa Souffrance.</span><br />
+	&nbsp;</p>
+	</li>
+</ul>
+
+<p style="text-align: justify;">Le Sacrieur peut ainsi choisir s&rsquo;il veut jouer un r&ocirc;le d&eacute;fensif ou offensif, en jouant certains sorts plut&ocirc;t que d&rsquo;autres.<br />
+&nbsp;</p>
+
+<p style="text-align: justify;">Il y a &eacute;videmment quelques limites, la Souffrance varie de -10 &agrave; 10 et ne peut pas d&eacute;passer ces bornes, avec les bonus suivants :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Souffrance positive (1 &agrave; 10) : le Sacrieur gagne des dommages mais perd de la Vitalit&eacute; &agrave; chaque incr&eacute;mentation de la Souffrance.</span>
+
+	<ul>
+		<li style="text-align: justify;"><span style="text-align: justify; font-size: 1.5rem;">&Agrave; 6 ou plus, il change d&rsquo;apparence et gagne un meilleur bonus aux dommages.</span></li>
+	</ul>
+	</li>
+</ul>
+&nbsp;
+
+<ul>
+	<li><span style="tab-stops:list 36.0pt">Souffrance n&eacute;gative (-1 &agrave; -10) : le Sacrieur gagne de la Vitalit&eacute; &agrave; chaque incr&eacute;mentation.</span>
+
+	<ul>
+		<li>&Agrave; -6 ou moins, il change d&rsquo;apparence et gagne un bonus de r&eacute;duction de dommages.</li>
+	</ul>
+	</li>
+</ul>
+<br />
+Ce syst&egrave;me nous semble &ecirc;tre une bonne alternative au syst&egrave;me des Ch&acirc;timents :
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Ses r&ocirc;les ne sont plus d&eacute;termin&eacute;s par les Ch&acirc;timents qui prenaient la place d&rsquo;autres sorts potentiellement plus int&eacute;ressants.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Ce sont les actions du Sacrieur qui d&eacute;terminent son r&ocirc;le sur la dur&eacute;e.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les dommages du Sacrieur sont inversement proportionnels avec sa capacit&eacute; &agrave; encaisser des dommages (moins il a de Vitalit&eacute; plus il fait mal, et inversement).</span></li>
+</ul>
+
+<p style="text-align: justify;">Vous aurez cependant remarqu&eacute; qu&rsquo;il n&rsquo;y a pas de remplacement pour le bonus de mobilit&eacute; du Ch&acirc;timent V&eacute;loce via la jauge de Souffrance. Si ce Ch&acirc;timent remplissait bien un r&ocirc;le (placement / d&eacute;placement), c&rsquo;est avant tout un r&ocirc;le qui sert &agrave; compl&eacute;ter aussi bien les capacit&eacute;s offensives de la classe que ses capacit&eacute;s d&eacute;fensives. Pour cette raison, nous n&rsquo;avons pas souhait&eacute; l&rsquo;isoler : le Sacrieur sera ainsi libre d&rsquo;utiliser ses sorts de mobilit&eacute; (dont Transposition), peu importe son niveau de Souffrance.<br />
+&nbsp;</p>
+
+<h3 style="text-align: justify;">Organisation des sorts</h3>
+&nbsp;
+
+<p style="text-align: justify;">La suppression des Ch&acirc;timents a donc lib&eacute;r&eacute; 3 nouveaux sorts, et cela permet le retour de la voie Terre !</p>
+
+<p style="text-align: justify;">Les 4 voies &eacute;l&eacute;mentaires sont r&eacute;organis&eacute;es pour mieux int&eacute;grer le syst&egrave;me de Souffrance. Chaque voie est structur&eacute;e de cette fa&ccedil;on :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">1 sort de placement ou de d&eacute;placement</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">1 sort typ&eacute; &laquo; offensif &raquo; qui augmente la Souffrance</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">1 sort typ&eacute; &laquo; d&eacute;fensif &raquo; qui r&eacute;duit la Souffrance</span></li>
+</ul>
+
+<p style="text-align: justify;">Concernant les sorts utilitaires, ils sont pour la plupart peu affect&eacute;s par cette refonte :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Transposition n&rsquo;a plus besoin d&rsquo;un &eacute;tat sp&eacute;cifique pour &ecirc;tre lanc&eacute;</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Convalescence n&rsquo;a plus besoin d&rsquo;un &eacute;tat sp&eacute;cifique pour &ecirc;tre lanc&eacute;</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Punition n&rsquo;a plus besoin d&rsquo;un &eacute;tat sp&eacute;cifique pour &ecirc;tre lanc&eacute; et n&rsquo;applique plus l&rsquo;&eacute;tat pesanteur</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Douleur partag&eacute;e est remplac&eacute; par un nouveau sort qui augmente la Souffrance de 2 niveaux. </span>
+	<ul>
+		<li style="text-align: justify;"><span style="tab-stops:list 72.0pt">Le sort Douleur partag&eacute;e est d&eacute;sormais utilis&eacute; comme variante.</span></li>
+	</ul>
+	</li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Le fonctionnement de D&eacute;robade est l&eacute;g&egrave;rement modifi&eacute; : il applique d&eacute;sormais une invuln&eacute;rabilit&eacute; en m&ecirc;l&eacute;e et repousse toujours d&rsquo;une case sur attaque en m&ecirc;l&eacute;e.</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h3 style="text-align: justify;">Les variantes</h3>
+
+<p style="text-align: justify;">Le Sacrieur profitera au m&ecirc;me titre que les autres classes d&rsquo;une variante pour chacun de ses sorts. Je vous renvoie vers l&rsquo;article de Devblog correspondant pour en apprendre plus &agrave; ce sujet !</p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/794938-refonte-sacrieur-2-45]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Mon, 13 Nov 2017 17:00:00 +0200</pubDate>
+                <guid isPermaLink="false">90f6e79c742dd479a9d33c1d51d1b2df</guid>
+      </item>
+          <item>
+        <title><![CDATA[Variantes de sort 2.45]]></title>
+        <description><![CDATA[<p class="MsoSubtitle">Le projet des variantes de sorts arrive enfin &agrave; son terme et sera disponible dans la mise &agrave; jour de d&eacute;cembre. Il s&#39;agit d&#39;une &eacute;volution capitale pour DOFUS puisque nous doublons le nombre de sorts pour l&#39;ensemble des classes du jeu !</p>
+ <div class="ak-big-image template_block">
+<div class="embed-responsive embed-responsive-16by9 embeddedContent oembed-provider- oembed-provider-youtube" data-align="center" data-maxheight="315" data-maxwidth="560" data-oembed="https://www.youtube.com/watch?v=QlgyAC_FupM" data-oembed_provider="youtube" data-resizetype="custom" style="text-align: center;"><iframe allowfullscreen="true" allowscriptaccess="always" frameborder="0" height="315" scrolling="no" src="//www.youtube.com/embed/QlgyAC_FupM?wmode=transparent&amp;jqoemcache=i6a1k" width="560"></iframe></div>
+
+<p class="fake">&nbsp;</p>
+</div>
+
+<p class="fake">&nbsp;</p>
+
+<h2 style="tab-stops:214.5pt">Qu&rsquo;est-ce que c&rsquo;est ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+
+<p style="text-align: justify;">Actuellement les classes ont 22 sorts : les 20 sorts obtenus pendant la progression du niveau 1 &agrave; 100, le sort sp&eacute;cial obtenu au temple de classe et l&#39;invocation de Dopeul au niveau 200.</p>
+
+<p style="text-align: justify;">Les variantes de sort sont 21 nouveaux sorts qui s&rsquo;obtiennent du niveau 101 &agrave; 200 (approximativement tous les 5 niveaux). Chaque variante est associ&eacute;e &agrave; un sort existant et une fois d&eacute;bloqu&eacute;e, vous pouvez faire le choix de s&eacute;lectionner ce sort ou sa variante.</p>
+
+<p style="text-align: justify;">Ce choix peut &ecirc;tre fait &agrave; tout moment (sauf en combat), gratuitement et sans restriction.<br />
+&nbsp;</p>
+
+<h3>Objectifs</h3>
+
+<p>L&rsquo;ajout des variantes a plusieurs int&eacute;r&ecirc;ts :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Apporter de nouvelles capacit&eacute;s aux classes via la cr&eacute;ation de 21 sorts.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Offrir davantage de possibilit&eacute;s de personnalisation des personnages.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Permettre aux classes de s&rsquo;adapter plus facilement en fonction des situations et assouplir les compositions de classes.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Amener des r&eacute;compenses int&eacute;ressantes une fois le niveau 100 atteint.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Am&eacute;liorer le syst&egrave;me de s&eacute;lection des sorts qui reposait sur les points de sort et qui n&#39;offrait pas r&eacute;ellement de personnalisation (tout le monde pouvait &agrave; terme avoir tous les sorts au niveau 6).</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Augmenter l&#39;accessibilit&eacute; de certains sorts en proposant des variantes plus simples et augmenter la profondeur de certains sorts en proposant des variantes plus &eacute;labor&eacute;es.</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h3>R&eacute;organisation des sorts existants</h3>
+
+<p>Afin d&rsquo;int&eacute;grer au mieux les 21 nouveaux sorts, il a fallu revoir certains points :<br />
+&nbsp;</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Le sort sp&eacute;cial de chaque classe (celui qui s&rsquo;obtient au temple) est d&eacute;sormais int&eacute;gr&eacute; &agrave; la progression des personnages : il est d&eacute;bloqu&eacute; comme n&rsquo;importe quel autre sort &agrave; un niveau sp&eacute;cifique.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">En cons&eacute;quence, les niveaux d&rsquo;obtention des sorts sont revus.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les points de sort sont supprim&eacute;s : d&eacute;sormais les sorts de classe ont 3 grades. Il n&rsquo;y a plus besoin d&rsquo;investir des points de sort pour am&eacute;liorer un sort : les grades ont un niveau d&rsquo;obtention et sont d&eacute;bloqu&eacute;s automatiquement quand un personnage atteint ce niveau. Un sort peut ainsi &eacute;voluer automatiquement 2 fois.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les sorts communs (Flamiche, Lib&eacute;ration, etc.) n&#39;ont plus qu&#39;un seul niveau, bas&eacute; sur leur ancien niveau 6, et n&#39;ont pas de variante.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les invocations de Dopeul sont supprim&eacute;es : ce sont des invocations et nous ne souhaitions pas qu&rsquo;elles aient un impact trop important dans les combats car leurs actions peuvent &ecirc;tre difficiles &agrave; anticiper. Nous avons donc r&eacute;duit leur puissance au fil des ann&eacute;es. Ils ont perdu en int&eacute;r&ecirc;t et ont d&eacute;sormais un statut probl&eacute;matique : ils rallongent la dur&eacute;e des combats sans &ecirc;tre des outils tactiques int&eacute;ressants ou fiables. Nous avons r&eacute;fl&eacute;chi &agrave; diverses solutions afin de leur apporter de l&rsquo;int&eacute;r&ecirc;t (par exemple, les rendre contr&ocirc;lables, plus puissants mais plus &eacute;ph&eacute;m&egrave;res) mais nous ne sommes arriv&eacute;s &agrave; rien de concluant : ils sont dans tous les cas redondants avec les sorts de classe et n&rsquo;apportent pas assez d&rsquo;int&eacute;r&ecirc;t par rapport &agrave; leurs inconv&eacute;nients (probl&egrave;mes de lisibilit&eacute; des combats et temps de jeu augment&eacute;).</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Modifications sur les sorts existants : il &eacute;tait contre-productif d&rsquo;apporter une variante pour des sorts dont le fonctionnement n&#39;&eacute;tait pas satisfaisant. Nous avons donc profit&eacute; de ce chantier pour revoir certains sorts de classe. Le d&eacute;tail de ces modifications sera disponible dans le changelog de la mise &agrave; jour de d&eacute;cembre.</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h2>Classe par Classe</h2>
+
+<p>Globalement, toutes les classes auront d&eacute;sormais acc&egrave;s &agrave; un panel de sorts offensifs suffisants dans les 4 &eacute;l&eacute;ments.</p>
+
+<p>Sans entrer dans le d&eacute;tail de ce que fera chaque sort, voici une explication de ce que nous avons souhait&eacute; apporter &agrave; chaque classe.<br />
+&nbsp;</p>
+
+<h3>Cr&acirc;</h3>
+
+<p style="text-align: justify;">Les variantes du Cr&acirc; lui apportent des meilleurs outils pour le jeu en groupe (sorts de placement / d&eacute;placement notamment) et peuvent renforcer ses capacit&eacute;s d&rsquo;entrave ou de dommages.<br />
+&nbsp;</p>
+
+<h3>Ecaflip</h3>
+
+<p style="text-align: justify;">Nous avons supprim&eacute; le mode Veinard : ce syst&egrave;me &eacute;tait fonctionnel mais assez difficilement lisible et trop contraignant. Nous avons pr&eacute;f&eacute;r&eacute; revoir les sorts associ&eacute;s et occasionnellement nous avons int&eacute;gr&eacute; sous forme de variante les effets qui &eacute;taient d&eacute;clench&eacute;s via le mode &laquo; Veinard &raquo;.</p>
+
+<p style="text-align: justify;">De plus, certains sorts de l&rsquo;Ecaflip ont d&eacute;sormais des effets diff&eacute;rents en coup critique : par exemple Bluff occasionne des dommages Air en coup normal et Eau en coup critique. Cette fa&ccedil;on de g&eacute;rer les effets al&eacute;atoires nous semble plus saine : elle peut &ecirc;tre contr&ocirc;l&eacute;e en jouant sur les bonus aux critiques de l&rsquo;&eacute;quipement, ou des sorts. Et d&rsquo;ailleurs l&rsquo;Ecaflip aura aussi davantage d&rsquo;outils pour modifier son taux de critique (&agrave; la baisse comme &agrave; la hausse).<br />
+&nbsp;</p>
+
+<h3>&Eacute;liotrope</h3>
+
+<p style="text-align: justify;">Le fonctionnement de la plupart des sorts qui n&eacute;cessitaient l&rsquo;&eacute;tat Portail est revu. Ces sorts joueront d&eacute;sormais leur effet bonus s&rsquo;ils sont lanc&eacute;s &agrave; travers un Portail et non plus si la cible est dans l&rsquo;&eacute;tat Portail.</p>
+
+<p style="text-align: justify;">L&rsquo;&eacute;tat Portail est tout de m&ecirc;me conserv&eacute; et pourra &ecirc;tre exploit&eacute; comme une ressource pour certains sorts.</p>
+
+<p style="text-align: justify;">Les effets de soin d&rsquo;Affliction et Affront sont cependant supprim&eacute;s. Les capacit&eacute;s de soin de l&rsquo;Eliotrope sont toujours pr&eacute;sentes, voire renforc&eacute;es via les variantes.<br />
+&nbsp;</p>
+
+<h3>Eniripsa</h3>
+
+<p style="text-align: justify;">Nous avons revu les sorts Air et Eau : les sorts de base ne feront plus de soin mais feront davantage de dommages. Via les variantes, nous int&eacute;grons de nouveaux sorts pour ces voies qui soignent de 100% des dommages inflig&eacute;s (contre 50% auparavant) mais qui feront moins de dommages.</p>
+
+<p style="text-align: justify;">Nous en profitons pour supprimer le sort Mot D&eacute;cisif : ce sont les variantes qu&rsquo;il choisira qui d&eacute;finiront si un Eniripsa veut jouer de mani&egrave;re purement offensive ou pas.</p>
+
+<p style="text-align: justify;">Enfin, nous avons ajout&eacute; une voie Terre &agrave; la classe : c&rsquo;est une voie qui cible ses alli&eacute;s (invocations comprises) pour g&eacute;n&eacute;rer d&rsquo;importants dommages sur les ennemis.<br />
+&nbsp;</p>
+
+<h3>Enutrof</h3>
+
+<p style="text-align: justify;">Les invocations de l&rsquo;Enutrof ont d&eacute;sormais une petite sp&eacute;cificit&eacute; : elles soignent leur attaquant si c&rsquo;est un alli&eacute;. Les alli&eacute;s peuvent donc les utiliser pour r&eacute;g&eacute;n&eacute;rer leur vie.</p>
+
+<p style="text-align: justify;">Le sort Corruption est revu et applique d&eacute;sormais l&rsquo;&eacute;tat Pacifiste plut&ocirc;t que de faire passer le tour de la cible.</p>
+
+<p style="text-align: justify;">En ce qui concerne les variantes, elles offriront plus d&rsquo;outils &agrave; l&rsquo;Enutrof pour venir en aide &agrave; ses alli&eacute;s ou &agrave; lui-m&ecirc;me tout en lui d&eacute;bloquant de rares capacit&eacute;s de placement.</p>
+
+<p style="text-align: justify;">La voie Air fait son retour, bien plus compl&egrave;te qu&rsquo;auparavant. Elle offre entre autres, de nouvelles capacit&eacute;s de soin &agrave; l&rsquo;Enutrof.<br />
+&nbsp;</p>
+
+<h3>F&eacute;ca</h3>
+
+<p style="text-align: justify;">Via les variantes de ses sorts, nous avons souhait&eacute; offrir davantage de capacit&eacute;s de placement et de d&eacute;placement au F&eacute;ca, mais au d&eacute;triment de capacit&eacute;s de protection. Mais l&rsquo;inverse est aussi vrai : les F&eacute;ca pourront faire le choix de sacrifier encore davantage leur mobilit&eacute; afin de mieux prot&eacute;ger leurs alli&eacute;s.</p>
+
+<p style="text-align: justify;">De plus, les variantes des glyphes &eacute;l&eacute;mentaire sont des attaques directes qui posent un glyphe autour de la cible ou du lanceur. Ce glyphe est un glyphe positif qui g&eacute;n&egrave;re des bonus aux alli&eacute;s.<br />
+&nbsp;</p>
+
+<h3>Huppermage</h3>
+
+<p style="text-align: justify;">Pour la plupart des classes, nous &eacute;vitons de proposer une variante de sort qui n&rsquo;a pas le m&ecirc;me &eacute;l&eacute;ment que le sort de base, sauf dans certains cas : si le sort a un effet suppl&eacute;mentaire (par exemple du retrait PM, un d&eacute;placement, etc.) et que la variante que l&rsquo;on propose a elle aussi un effet suppl&eacute;mentaire. Dans ce cas, cela veut dire que la variante comme le sort de base ont un int&eacute;r&ecirc;t pour les autres voies &eacute;l&eacute;mentaires. Par exemple si un sort est Feu et repousse, que sa variante est Eau et attire, alors m&ecirc;me un personnage Eau est susceptible de prendre la variante Feu parce que son effet de pouss&eacute;e peut occasionnellement &ecirc;tre plus int&eacute;ressant que l&rsquo;attirance.</p>
+
+<p style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">Le seul cas qui d&eacute;roge &agrave; cette r&egrave;gle est l&rsquo;Huppermage : ses sorts &eacute;l&eacute;mentaires ne font que des dommages et ce sont les combinaisons de sorts qui g&eacute;n&egrave;rent des effets suppl&eacute;mentaires. En cons&eacute;quence, chaque sort &eacute;l&eacute;mentaire de l&rsquo;Huppermage a une variante dans un &eacute;l&eacute;ment diff&eacute;rent :</span></span></p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les sorts Air ont une variante Terre et inversement.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les sorts Eau ont une variante Feu et inversement.</span></li>
+</ul>
+
+<p style="text-align: justify;">Par cons&eacute;quent, il sera possible &agrave; un Huppermage de n&rsquo;avoir aucun sort d&rsquo;un &eacute;l&eacute;ment s&rsquo;il le souhaite. Mais cela veut dire qu&rsquo;il ne pourra g&eacute;n&eacute;rer aucun effet li&eacute; &agrave; cet &eacute;l&eacute;ment.<br />
+&nbsp;</p>
+
+<h3>Iop</h3>
+
+<p style="text-align: justify;">Cela fait 13 ans que vous l&rsquo;attendez, le Iop Eau entre enfin dans l&rsquo;ar&egrave;ne ! Ce Iop est plut&ocirc;t ax&eacute; sur les boucliers mais ne peut en procurer qu&rsquo;&agrave; lui-m&ecirc;me : chaque sort de dommage qu&rsquo;il lance lui g&eacute;n&egrave;re des points de bouclier. En contrepartie, ces sorts ne profitent &eacute;videmment pas de valeurs de dommages aussi &eacute;lev&eacute;es que ceux des autres voies &eacute;l&eacute;mentaires.<br />
+&nbsp;</p>
+
+<h3>Pandawa</h3>
+
+<p style="text-align: justify;">L&rsquo;arriv&eacute;e des variantes &eacute;tait le moment id&eacute;al pour revoir le fonctionnement de certains sorts clefs :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Karcham permet d&eacute;sormais aussi bien de porter que de jeter une entit&eacute; mais le jeter n&eacute;cessite d&eacute;sormais une ligne de vue.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Sa variante, Chamrak, lance moins loin mais ne n&eacute;cessite pas de ligne de vue.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Picole et Lait de Bambou ne font aussi plus qu&rsquo;un : si Picole est lanc&eacute; alors que le Pandawa est dans l&rsquo;&eacute;tat Sao&ucirc;l, il redevient sobre.</span></li>
+</ul>
+
+<p style="text-align: justify;">Vous l&rsquo;aurez compris, cela veut dire que de nouveaux sorts ont fait leur apparition dans le panel de base de la classe Pandawa.</p>
+
+<p style="text-align: justify;">Il y a d&eacute;sormais plusieurs sorts qui permettent de jeter une entit&eacute; port&eacute;e : certains la soignent, certains g&eacute;n&egrave;rent des effets &agrave; l&rsquo;impact ou sur la trajectoire, d&rsquo;autres ne sont pas contraints &agrave; un lancer en ligne. Jetez comme vous &ecirc;tes !<br />
+&nbsp;</p>
+
+<h3>Osamodas</h3>
+
+<p style="text-align: justify;">Vous l&rsquo;avez remarqu&eacute; pour l&rsquo;Eniripsa et l&rsquo;Enutrof, nous profitons des variantes pour ajouter une 4<sup>&egrave;me</sup> voie &eacute;l&eacute;mentaire pour les classes qui ne l&rsquo;ont pas (ou l&rsquo;ont perdue). Pour l&rsquo;Osamodas, une nouvelle voie &eacute;l&eacute;mentaire implique de nouvelles invocations, nouvelle fusion, etc.</p>
+
+<p style="text-align: justify;">Apr&egrave;s de longs d&eacute;bats, nous avons d&eacute;cid&eacute; que la nouvelle famille d&rsquo;invocations que l&rsquo;Osamodas pourra invoquer est le Crapaud, fier repr&eacute;sentant de sa voie Eau. Les Osamodas pourront ainsi fusionner avec leurs Crapauds pour gagner des bonus aux dommages.<br />
+<br />
+Nous avons &eacute;galement revu les bonus que peut donner l&rsquo;Osamodas &agrave; ses alli&eacute;s : ils ne sont plus donn&eacute;s par ses sorts &eacute;l&eacute;mentaires mais par Fouet et sont donc d&eacute;pendants de sa transformation :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Dragon : Soin</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Bouftou : R&eacute;duction de dommages</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Tofu : PM</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Crapaud : PA</span></li>
+</ul>
+
+<p style="text-align: justify;">L&rsquo;Osamodas a une nouvelle invocation par voie &eacute;l&eacute;mentaire, mais il ne peut tout de m&ecirc;me en cumuler que 2 (la variante de certaines invocations &eacute;tant une autre invocation). Il pourra cependant faire le choix d&rsquo;avoir davantage de sorts pour interagir avec elles (les rendre plus fortes, les d&eacute;placer ou les remplacer par exemple).<br />
+&nbsp;</p>
+
+<h3>Ouginak</h3>
+
+<p style="text-align: justify;">Afin de mieux caract&eacute;riser la forme bestiale, nous avons retir&eacute; son bonus en Vitalit&eacute; et augment&eacute; son bonus aux dommages. Ainsi les 2 modes de l&rsquo;Ouginak sont mieux diff&eacute;renci&eacute;s : le mode &laquo; normal &raquo; lui permet de survivre plus longtemps l&agrave; o&ugrave; la forme bestiale permet de gagner en mobilit&eacute; et d&rsquo;augmenter consid&eacute;rablement ses dommages.</p>
+
+<p style="text-align: justify;">Via les variantes, l&rsquo;Ouginak aura en outre plus d&rsquo;outils pour contr&ocirc;ler sa rage.<br />
+&nbsp;</p>
+
+<h3>Roublard</h3>
+
+<p style="text-align: justify;">Parlons tout de suite de la bombe Terre et de ses effets : c&rsquo;est une bombe qui fait peu de dommages de base mais elle profite d&rsquo;un bonus de combo sup&eacute;rieur &agrave; celui des autres bombes. La voie Terre peut donc se jouer seule ou pour compl&eacute;ter n&rsquo;importe quelle autre voie &eacute;l&eacute;mentaire afin de g&eacute;n&eacute;rer de &quot;grosses&quot; explosions plus rapidement.</p>
+
+<p style="text-align: justify;">Avec les variantes, vous aurez notamment le choix entre la pose de bombe normale ou la pose de bombe &laquo; &agrave; retardement &raquo; : c&rsquo;est-&agrave;-dire que la bombe n&rsquo;appara&icirc;tra pas au tour en cours sur la cellule cibl&eacute;e, mais au tour suivant. Si vous choisissez la version &agrave; retardement, alors vous pourrez poser 2 bombes d&rsquo;un m&ecirc;me &eacute;l&eacute;ment par tour !<br />
+&nbsp;</p>
+
+<h3>Sacrieur</h3>
+
+<p style="text-align: justify;">Un article devblog est consacr&eacute; aux modifications apport&eacute;es &agrave; la classe Sacrieur dans la mise &agrave; jour 2.45 (suppression des ch&acirc;timents, modifications des voies &eacute;l&eacute;mentaire).<br />
+<br />
+La plupart des sorts ont &eacute;t&eacute; modifi&eacute;s, mais parmi les nouvelles variantes, certains sorts pourraient vous para&icirc;tre familiers !<br />
+&nbsp;</p>
+
+<h3>Sadida</h3>
+
+<p style="text-align: justify;">Nous avons revu le fonctionnement des poup&eacute;es : plus simples d&rsquo;utilisation, elles ne n&eacute;cessiteront plus d&rsquo;arbre pour &ecirc;tre pos&eacute;e. En cons&eacute;quence, elles ne feront pas non plus appara&icirc;tre d&rsquo;arbre quand elles meurent et leurs contraintes de lancer sont plus grandes.</p>
+
+<p style="text-align: justify;">Les variantes des poup&eacute;es sont la version actuelle du sort, laissant ainsi le choix pour chaque poup&eacute;e d&rsquo;utiliser la version qui consomme ou non un arbre.</p>
+
+<p style="text-align: justify;">Nous avons &eacute;galement ajout&eacute; des moyens d&rsquo;appliquer ponctuellement l&rsquo;&eacute;tat Infect&eacute;. Et &eacute;videmment, les variantes des sorts profitent aussi de l&rsquo;&eacute;tat Infect&eacute;.<br />
+&nbsp;</p>
+
+<h3>Steamer</h3>
+
+<p style="text-align: justify;">Le nombre de sorts ayant doubl&eacute;, le nombre de tourelles double aussi ! Le Steamer n&rsquo;a toujours que 3 tourelles au maximum dans son panel mais peut d&eacute;sormais les s&eacute;lectionner parmi 6 tourelles diff&eacute;rentes que l&rsquo;on vous laissera d&eacute;couvrir.</p>
+
+<p style="text-align: justify;">La puissance de certaines tourelles en Evolution I est r&eacute;duite mais le Steamer pourra d&eacute;sormais avoir autant de tourelles qu&rsquo;il le souhaite en Evolution II (Une seule &agrave; la fois en Evolution III tout de m&ecirc;me).<br />
+&nbsp;</p>
+
+<h3>Sram</h3>
+
+<p style="text-align: justify;">Les variantes Sram s&rsquo;articulent en partie autour de ses pi&egrave;ges : certains sorts du Sram seront ainsi am&eacute;lior&eacute;s (Port&eacute;e, dommages, co&ucirc;t en PA, etc.) &agrave; chaque fois qu&rsquo;un de ses pi&egrave;ges est d&eacute;clench&eacute; par un ennemi.</p>
+
+<p style="text-align: justify;">Le fonctionnement de quelques nouveaux pi&egrave;ges diff&egrave;re par rapport &agrave; ceux existants : ces pi&egrave;ges ne font pour la plupart qu&rsquo;une seule cellule mais leurs effets une fois d&eacute;clench&eacute;s s&rsquo;&eacute;tendent sur une plus grande zone. Ils permettent plus facilement de toucher plusieurs cibles via un seul d&eacute;clenchement.</p>
+
+<p style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">Nous avons &eacute;galement r&eacute;introduit la voie Eau du Sram. Sp&eacute;cialis&eacute;e dans le vol de vie : elle permet de redistribuer la vie vol&eacute;e aux ennemis pour soigner les alli&eacute;s (mais pas le Sram). Concept r&eacute;sum&eacute; par un Game Designer (ayant souhait&eacute; garder l&#39;anonymat) : &laquo; Le Sram c&rsquo;est le Robin des Bois de la vie &raquo;.</span></span><br />
+&nbsp;</p>
+
+<h3>X&eacute;lor</h3>
+
+<p style="text-align: justify;">Les variantes permettent au X&eacute;lor d&rsquo;embrouiller encore plus ses adversaires comme ses alli&eacute;s.</p>
+
+<p style="text-align: justify;">Il peut profiter de davantage de sorts de t&eacute;l&eacute;portation et de retour dans le temps, mais il devra faire des choix.</p>
+
+<p style="text-align: justify;">Nous avons &eacute;galement revu l&rsquo;ordre d&rsquo;attribution de certains sorts par rapport &agrave; leur variante afin que l&rsquo;apprentissage de la classe soit moins brutal (lorsque cela s&#39;est av&eacute;r&eacute; pertinent, nous avons modifi&eacute; l&#39;ordre de certains sorts pour que les plus simples soient globalement obtenus du niveau 1 &agrave; 100 et les variantes plus profondes sont obtenus du niveau 101 &agrave; 200).<br />
+&nbsp;</p>
+
+<h3>Zobal</h3>
+
+<p style="text-align: justify;">Certains sorts du Zobal sont revus :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les sorts &quot;Pleutre&quot; et du masque de Classe sont am&eacute;lior&eacute;s.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Les sorts &quot;Psychopathe&quot; font moins d&rsquo;effets diff&eacute;rents mais sont plus efficaces (moins chers en PA, valeurs plus &eacute;lev&eacute;es).</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Ajout d&rsquo;un nouveau sort (&agrave; la place de Mascarade qui devient la variante de Fougue) qui permet d&rsquo;invoquer un masque qui tacle et partage les dommages avec son invocateur (permet de jouer en plus efficace le r&ocirc;le du Dopeul Zobal).</span></li>
+</ul>
+
+<p style="text-align: justify;">Concernant les variantes :</p>
+
+<ul>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">Celles des masques font des bonus diff&eacute;rents mais permettent toujours de lancer les m&ecirc;mes sorts.</span></li>
+	<li style="text-align: justify;"><span style="tab-stops:list 36.0pt">La variante d&rsquo;un sort s&rsquo;utilise toujours avec le m&ecirc;me masque.</span></li>
+</ul>
+
+<div style="text-align: justify;">&nbsp;</div>
+
+<h2>Panoplies de classe</h2>
+
+<p style="text-align: justify;">Les panoplies de classe seront mises &agrave; jour et modifieront les sorts actuels et leurs variantes. Nous ne cr&eacute;erons donc pas de nouveaux objets de classe.<br />
+&nbsp;</p>
+
+<h2>La B&ecirc;ta</h2>
+
+<p style="text-align: justify;">Nous restons volontairement vagues sur le fonctionnement pr&eacute;cis de chaque variante : nous sommes susceptibles d&rsquo;effectuer &eacute;norm&eacute;ment de changements sur les sorts et leurs variantes pendant la phase de B&ecirc;ta-Test.</p>
+
+<p style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">La meilleure fa&ccedil;on d&#39;appr&eacute;hender les nouvelles possibilit&eacute;s que vont d&eacute;bloquer les variantes avant la sortie officielle implique de </span></span>les tester sur le serveur de test. Suite &agrave; vos tests, n&rsquo;h&eacute;sitez pas &agrave; nous communiquer vos retours sur tout ce qu&rsquo;apporte la version 2.45 afin que nous puissions faire les ajustements n&eacute;cessaires.<br />
+&nbsp;</p>
+
+<h2>Questions et r&eacute;ponses</h2>
+&nbsp;
+
+<h3>Que vont devenir les points de sorts non naturels ?</h3>
+
+<p style="text-align: justify;">Les points de sorts non naturels (ceux obtenus via des parchemins) seront automatiquement convertis en Koliz&eacute;tons lors de la sortie de la version 2.45.<br />
+Une nouvelle r&eacute;compense cosm&eacute;tique pourra &ecirc;tre achet&eacute;e en Koliz&eacute;tons. Elle viendra compl&eacute;ter les diff&eacute;rentes mesures que nous avons introduites en 2017 pour revaloriser l&#39;utilisation des Koliz&eacute;tons (utilisation dans de nouvelles recettes d&#39;&eacute;quipements, de boucliers et dans les pierres d&#39;&acirc;mes).<br />
+&nbsp;</p>
+
+<h3>Est-ce qu&#39;un syst&egrave;me pour changer rapidement de variantes est pr&eacute;vu ?</h3>
+
+<p>Nous avons commenc&eacute; &agrave; travailler sur un syst&egrave;me permettant d&#39;enregistrer des ensembles de variantes et de les changer rapidement, mais il ne sera pas pr&ecirc;t pour la mise &agrave; jour 2.45. Il sera disponible dans une prochaine mise &agrave; jour majeure en 2018.<br />
+&nbsp;</p>
+
+<h3>Pourquoi les sorts communs n&#39;ont-ils pas de variantes ?</h3>
+
+<p style="text-align: justify;">Nous ne souhaitons pas actuellement ajouter trop de possibilit&eacute;s suppl&eacute;mentaires aux classes via des sorts communs. A long terme, nous aimerions proposer un syst&egrave;me dans lequel les joueurs pourraient choisir un nombre limit&eacute; de sorts communs parmi un ensemble de sorts.<br />
+&nbsp;</p>
+
+<h3>Les classes ne vont-elles pas devenir trop polyvalentes ?</h3>
+
+<p style="text-align: justify;"><span style="font-size:12.0pt"><span new="" roman="" style="font-family:" times="">Les variantes nous permettent de renforcer certains r&ocirc;les secondaires et d&#39;ajouter de nouveaux r&ocirc;les &agrave; certaines classes. Cependant, le syst&egrave;me des variantes impose au joueur de faire des choix entre un sort et sa variante. Si les classes gagnent globalement en polyvalence, &agrave; l&#39;&eacute;chelle d&#39;un combat il sera </span></span><br />
+n&eacute;cessaire de faire des choix et tous les r&ocirc;les ne pourront pas &ecirc;tre jou&eacute;s simultan&eacute;ment de fa&ccedil;on optimale.<br />
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+]]></description>
+        <link>
+        <![CDATA[http://www.dofus.com/fr/mmorpg/actualites/devblog/billets/791971-variantes-sort-2-45]]></link>
+                  <category><![CDATA[Dofus]]></category>
+                <pubDate>Fri, 10 Nov 2017 10:00:00 +0200</pubDate>
+                <guid isPermaLink="false">00f74ad61850907891b253fb053c15a3</guid>
+      </item>
+      </channel>
+</rss>

@@ -1,0 +1,110 @@
+.post{
+
+    background: #ebe7e8;
+
+    padding: 5px;
+
+    /*border-radius: 0 0 10px 10px;*/
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.quotemain{
+
+    background: #dcdcdc;
+
+    padding: 5px;
+
+    display: none;
+
+}
+
+
+
+.quotetop{
+
+    background: linear-gradient(to right, #919191,#afacad);
+
+    padding: 2px;
+
+    font-weight: bolder;
+
+    border-radius: 2px 2px 2px 2px;
+
+}
+
+
+
+.topic{
+
+}
+
+
+
+.info{
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    align-items: baseline;
+
+    padding: 5px;
+
+    background: linear-gradient(to left, #a19e9f, #dcdcdc);
+
+    border-radius: 8px 8px 0 0;
+
+}
+
+
+
+.author{
+
+    order: 1;
+
+    font-size: large;
+
+    font-weight: bolder;
+
+    margin: 0 5px 0 0;
+}
+
+
+
+.date{
+
+    order : 2;
+
+    margin: auto 8px 4px 8px;
+
+}
+
+
+
+.post_title{
+
+    order : 3;
+
+}
+
+
+
+.post_title > a{
+
+    color : #5d5d5d;
+
+    font-size: large;
+
+    font-weight: bolder;
+
+    text-decoration: underline;;
+
+    text-shadow: 1px 1px #6e6e6e;
+
+}
