@@ -1,4 +1,4 @@
-﻿<?php include(dirname(__FILE__,1).'/includes/inhead.php'); ?>
+<?php include(dirname(__FILE__,1).'/includes/inhead.php'); ?>
     <title>Accueil - Profus</title>
     <meta name="title" content="Accueil - Profus">
     <meta name="description" content="Profus est un site sur Dofus 2.0 fait par des passionnés souhaitant aider les joueurs en fournissant divers outils et simulateurs.">
