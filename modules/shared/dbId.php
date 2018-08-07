@@ -1,5 +1,6 @@
-<?php
-define("HOST", "localhost");
-define("DB_NAME", "profus");
-define("USER", "root");
+<?php
+
+define("HOST", "");
+define("DB_NAME", "");
+define("USER", "");
 define("PWD", "");
