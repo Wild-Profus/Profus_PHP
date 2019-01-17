@@ -19,7 +19,7 @@ function craft_xp($craft_lvl, $craft_base_xp, $skill_lvl, $bonus=1){
             $craft_xp = floor(($craft_base_xp/(1+0.1*($skill_lvl-$craft_lvl)**1.1))*$bonus);
         }
     }elseif($skill_lvl===$craft_lvl){
-        $craft_xp=$craft_base_xp;
+        $craft_xp=$craft_base_xp*$bonus;
     }else{
         $craft_xp=0;
     }
