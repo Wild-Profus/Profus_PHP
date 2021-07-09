@@ -1,0 +1,27 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Login" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div class="content-area">
+        {% if request.user.is_authenticated %}
+            <div>You are logged in as {{ request.user.username }}, <a href="./Logout">Logout</a></div>
+        {% else %}
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="username"> {{ i18n.626743 }} </label>
+                <input type="text" name="username" placeholder="Enter pseudo">
+                <label for="password"> {{ i18n.66659 }} </label>
+                <input type="text" name="password">
+                <input type="checkbox" name="remember_me"> Remember me
+                <input type="submit" name="" value="{{title}}">
+            </form>
+            <div><a href="./register">{{ i18n.66723 }}</a></div>
+        {% endif %}
+
+    </div>
+{% endblock %}

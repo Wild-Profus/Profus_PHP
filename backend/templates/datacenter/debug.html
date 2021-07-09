@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <link rel="icon" type="../image/png" href="{% static 'icons/favicon.png' %}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+        <title>Profus Data Debugger</title>
+    </head>
+    <body>
+        <section class="section">
+            <div class="container is-fluid">
+                <div class="tile is-ancestor">
+                    <div class="tile is-3">
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="field">
+                                <label class="label">Data type</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select name="data_type">
+                                            <option>D2O</option>
+                                            <option>I18n</option>
+                                            <option>Map</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Files</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select name="fileName">
+                                            {% for filepath in files %}
+                                            <option {% if filepath == selected %}selected{% endif %}>{{ filepath }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Index:</label>
+                                <div class="control">
+                                  <input class="input" type="number" placeholder="Enter the index to debug" name='index' value='{{index}}'>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                  <label class="checkbox">
+                                    <input type="checkbox" name='sample' {% if sample %}checked{% endif %} value="true">
+                                    Get sample of data.
+                                  </label>
+                                </div>
+                              </div>
+                            {% csrf_token %}
+                            <div class="control">
+                                <input class="button is-link" type="submit" name="" value="Go">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tile is-9">
+                        <span>{{selected}} {{index}} {{ sample }}</span>
+                        <pre>Composition de la classe:<br>{{ classes|safe }}</pre>
+                        <pre>Données:<br>{{ data|safe }}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

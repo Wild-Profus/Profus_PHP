@@ -1,0 +1,31 @@
+{% load tags %}
+<form action="{{ form.action }}" method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+        <ol>
+            {% for error in form.non_field_errors %}
+                <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    {% for field in form.visible_fields %}
+        <div class="fieldWrapper">
+            {% if field.errors %}
+                <ol>
+                    {% for error in field.errors %}
+                        <li><strong>{{ error|escape }}</strong></li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+            <label for="{{ field.id_for_label }}">{{ i18n|getKey:field.label }}</label>
+            {{ field }}
+            {% if field.help_text %}
+                <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <input type="submit" value="Submit">
+</form>

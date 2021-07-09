@@ -1,0 +1,142 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <link rel="icon" type="../image/png" href="{% static 'icons/favicon.png' %}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/default.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700i">
+        <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"-->
+        <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+        {% block links %}{% endblock %}
+        <title>{% block title %}Profus{% endblock %}</title>
+    </head>
+    <body>
+        <nav id="nav-bar">
+            <ul id="nav-imgs">
+                <li class="{% if request.path == '/home' or request.path == '/' %}active{% endif %}"><a id="Brand" href="./home">Profus<small>&beta;</small></a></li>
+                <li class="{% if request.path == '/news' %}active{% endif %}"><a href="./news" title="Les dernière dépêches"><img class="nav-img" src="{% static 'icons/news.png' %}"><span class="nav-img-tooltip">Les dernière dépêches</span></a></li>
+                <li class="{% if request.path == '/map' %}active{% endif %}"><a href="./map" title="Trouves toutes les ressources"><img class="nav-img" src="{% static 'icons/map.png' %}"><span class="nav-img-tooltip">Trouves toutes les ressources</span></a></li>
+                <li class="{% if request.path == '/almanax' %}active{% endif %}"><a href="./almanax" title="Les offrandes sur un mois ou plus"><img class="nav-img" src="{% static 'icons/almanax.png' %}"><span class="nav-img-tooltip">Les offrandes sur un mois ou plus</span></a></li>
+                <li class="{% if request.path == '/idols' %}active{% endif %}"><a href="./idols" title="Trouve LA composition"><img class="nav-img" src="{% static 'icons/idoles.png' %}"><span class="nav-img-tooltip">Trouve LA composition</span></a></li>
+                <li class="{% if request.path == '/stuff' %}active{% endif %}"><a href="./stuff" title="Trouve tes équipements"><img class="nav-img" src="{% static 'icons/equipements.png' %}"><span class="nav-img-tooltip">Trouve tes équipements</span></a></li>
+                <li class="{% if request.path == '/jobs' %}active{% endif %}"><a href="./jobs" title="Les meilleures recettes pour les monter"><img class="nav-img" src="{% static 'icons/metiers.png' %}"><span class="nav-img-tooltip">Les meilleures recettes pour les monter</span></a></li>
+                <li class="{% if request.path == '/broker' %}active{% endif %}"><a href="./broker" title="Trouve les brisages rentables"><img class="nav-img" src="{% static 'icons/brisage.svg' %}"><span class="nav-img-tooltip">Trouve les brisages rentables</span></a></li>
+                <li class="{% if request.path == '/fmhelper' %}active{% endif %}"><a href="./fmhelper" title="Astuces fm !"><img class="nav-img" src="{% static 'icons/fm.png' %}"><span class="nav-img-tooltip">Astuces fm</span></a></li>
+                <li class="{% if request.path == '/shop' %}active{% endif %}"><a href="./shop" title=""><img class="nav-img" src="{% static 'icons/shop.png' %}"><span class="nav-img-tooltip">Ma shopping liste</span></a></li>
+                <li class="{% if request.path == '/tradeHelper' %}active{% endif %}"><a href="./tradeHelper" title=""><img class="nav-img" src="{% static 'icons/trade.png' %}"><span class="nav-img-tooltip">TradeHelper</span></a></li>
+                <li class="{% if request.path == '/inventory' %}active{% endif %}"><a href="./inventory" title=""><img class="nav-img" src="{% static 'icons/inventaire.png' %}"><span class="nav-img-tooltip">Mon inventaire</span></a></li>
+                {% if request.user.is_authenticated %}
+                    <li class="{% if request.path == '/account'%}active{% endif %}"><a href="./account" title=""><img class="nav-img" src="{% static 'icons/user_id.png' %}"><span class="nav-img-tooltip">Mon compte</span></a></li>
+                {% else %}
+                    <li class="{% if request.path == '/login'%}active{% endif %}"><a href="./login" title=""><img class="nav-img" src="{% static 'icons/user.png' %}"><span class="nav-img-tooltip">Connexion</span></a></li>
+                {% endif %}
+                <li><lang></lang></li>
+            </ul>
+        </nav>
+        <section class="container is-fluid">
+            <div class="columns">
+                <div class="column has-text-centered">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+                <div class="column is-2">
+                    <div class="notification">
+                        <p>Profus Beta, by Wild</p>
+                        <p>Images are property of &copy;AnkamaGames</p>
+                        <p><a href="https://discord.gg/CDkz6Fj">Discord</a></p>
+                    </div>
+                    <div class="notification">
+                        <p>Emplacement pub futur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <section>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+        <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"></script>
+        <script>
+            Vue.http.interceptors.push(function(request, next) {
+                request.headers.set('X-CSRFToken', '{% csrf_token %}'.substr(55).slice(0, -2))
+                request.headers.set('Content-type', 'application/json;charset=utf-8')
+                request.headers.set('Authorization', 'Bearer TOKEN')
+                next()
+            })
+
+            Vue.component('item', {
+                delimiters: ['[[', ']]'],
+                data: function() {
+                    return {
+                    }
+                },
+                props: {
+                    item: Object
+                },
+                template: '<div class="media"> \
+                                <div class="media-left"> \
+                                    <b-tooltip :label="this.item.name"> \
+                                        <img class="image is-32x32" :src="`/static/dofus2/dofusData/item/bitmap/${Math.floor(this.item.icon_id/1000)}/${this.item.icon_id}.png`"> \
+                                    </b-tooltip> \
+                                </div> \
+                                <div class="media-content has-text-weight-bold is-size-5 nobreak"> \
+                                    [[ this.item.name ]] \
+                                </div> \
+                            </div>'
+            })
+            
+            Vue.component('lang', {
+                delimiters: ['[[', ']]'],
+                data: function() {
+                    return {
+                        lang: null,
+                        langs: ['fr', 'en', 'es', 'it', 'de', 'pt', 'ru', 'nl']
+                    }
+                },
+                created: function() {
+                    if (localStorage.lang) {
+                        this.lang = localStorage.lang
+                    } else {
+                        this.lang = 'fr'
+                    }
+                },
+                method:{
+                    update_lang() {
+
+                        if ((this.page + value) < 1) {
+                            this.page = 1
+                        } else if ((this.page + value) > this.max_page) {
+                            this.page = this.max_page
+                        } else {
+                            this.page = this.page + value
+                        }
+                    },
+                },
+                template: '\
+                    <b-dropdown class="is-marginless" v-model="lang">\
+                        <button class="button is-marginless" type="button" slot="trigger">\
+                            <figure class="image has-ratio" width="50" heigth="37" >\
+                                <img :src="`/static/flags/${lang}.png`">\
+                            </figure>\
+                        </button>\
+                        <b-dropdown-item class="is-marginless" v-for="lg in langs" :value="lg">\
+                            <img class="image has-ratio" width="50" heigth="37" :src="`/static/flags/${lg}.png`" @click="update_lang">\
+                        </b-dropdown-item>\
+                    </b-dropdown>'
+            })
+            new Vue({
+                el: '#nav-bar',
+                delimiters: ['[[', ']]'],
+            })
+        </script>
+        <!--script src="../../assets/js/navbar.js"> </script-->
+        {% block js %}
+        {% endblock %}
+    </section>
+</html>

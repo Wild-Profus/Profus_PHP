@@ -1,0 +1,351 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Jobs" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div id="job_app" class="notification has-text-centered">
+        <b-field v-cloak>
+            <b-select v-model="selectedJob" @input="resetCrafts" placeholder="{{ i18n.67196 }}">
+                <option
+                    v-for="job in jobs"
+                    :value="job"
+                >[[ job.label ]]</option>
+            </b-select>
+            <p class="control">
+                <span class="button is-static">{{ i18n.66353 }} ({{ i18n.395929|lower }})</span>
+            </p>
+            <b-input v-model="startingXp" class="is-expanded"></b-input>
+            <p class="control">
+                <span class="button is-static">{{ i18n.67196 }} {{ i18n.66569|lower }} [[ currentLevel ]]</span>
+            </p>
+            <b-select v-model="globalCraftXpRatio">
+                <option
+                    v-for="ratio in ratios"
+                    :value="ratio"
+                >[[ ratio ]]</option>
+            </b-select>
+            <p class="control">
+                <span class="button is-static">%</span>
+            </p>
+        </b-field>
+        <table v-cloak v-if="crafts.length > 0" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <tbody>
+                <tr>
+                    <th>{{ i18n.521817 }}</th>
+                    <th class="has-text-centered">{{ i18n.66573 }}</th>
+                    <th class="has-text-centered">{{ i18n.66701 }}</th>
+                    <th class="has-text-centered">{{ i18n.67913 }}</th>
+                    <th class="has-text-centered">{{ i18n.66683 }}</th>
+                    <th class="has-text-centered"><b-button class="has-text-weight-bold" size="is-small" type="is-primary" @click="addToCart">+</b-button></th>
+                </tr>
+                <tr v-for="(craft, key) in crafts">
+                    <td>
+                        <item :item="craft.recipe"></item>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ craft.recipe.level ]]
+                    </td>
+                    <td class="is-paddingless">
+                        <b-input @input.native="debounce($event, key, 1)" @blur="updateQuantity($event, key, 1 )" :value="craft.quantity">
+                        </b-input>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ craft.finalXp - craft.startingXp ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <b-field>
+                            <p class="control">
+                                <span class="button is-static">[[ xpToLevel(craft.startingXp) + '(' + craft.startingXp + ') -> ' ]]</span>
+                            </p>
+                            <b-input @input.native="debounce($event, key, 0)" @blur="updateQuantity($event, key, 0)" :value="xpToLevel(craft.finalXp)" expanded></b-input>
+                            <p class="control">
+                                <span class="button is-static">[[ '(' + craft.finalXp + ')' ]]</span>
+                            </p>
+                        </b-field>
+                    </td>
+                    <td class="has-text-centered">
+                        <b-button class="has-text-weight-bold" size="is-big" type="is-danger" @click="removeCraft(key)">X</b-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table v-cloak v-if="selectedJob" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth is-marginless">
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th>{{ i18n.426050 }}</th>
+                    <th class="has-text-centered">{{ i18n.66573 }}</th>
+                    <th class="has-text-centered">{{ i18n.66433 }}</th>
+                    <th class="has-text-centered">{{ i18n.67913 }}</th>
+                    <th class="has-text-centered">{{ i18n.66573 }} [[ currentLevel ]]</th>
+                </tr>
+                <tr v-for="(recipe, index) in displayed_recipes" :key="recipe.id">
+                    <td>
+                        <item :item="recipe"></item>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ recipe.level ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <div :style="'min-width:' + 32 * recipe.ing.length + 'px;'">
+                            <span v-for="ingredient in recipe.ing">
+                                <b-tooltip :label="ingredient.name + ' x' + ingredient.qty">
+                                    <figure class="image is-32x32">
+                                        <img :src="`/static/dofus2/dofusData/item/bitmap/${Math.floor(ingredient.icon_id/1000)}/${ingredient.icon_id}.png`" :alt="``"/>
+                                        <span class="has-text-weight-bold is-overlay has-text-right" style="text-shadow:#ffffff 0.1px 0.1px, #ffffff -0.1px 0.1px, #ffffff -0.1px -0.1px, #ffffff 0.1px -0.1px">
+                                            x[[ ingredient.qty ]]
+                                        </span>
+                                    </figure>
+                                </b-tooltip>
+                            </span>
+                        </div>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ recipe.craftXp ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ getCraftXp(currentLevel, recipe.level, recipe.craftXp) ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <div style="min-width: 166px;">
+                        <b-button size="is-small" type="is-success" @click="addCraft(recipe, 1, null)">+1</b-button>
+                        <b-button size="is-small" type="is-success" @click="addCraft(recipe, null, 10)">->[[ recipe.level + 10 - recipe.level % 10 ]]</b-button size="is-small">
+                        <b-button v-if="recipe.level < 190" size="is-small" type="is-success" @click="addCraft(recipe, null, 20)" >->[[ recipe.level + 20 - recipe.level % 10 ]]</b-button size="is-small">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <b-field v-cloak v-if="selectedJob" position="is-centered">
+            <b-button size="is-small" type="is-success" @click="changePage(-100)" :disabled="page==1"><<</b-button>
+            <b-button size="is-small" type="is-success" @click="changePage(-1)" :disabled="page==1"><</b-button>
+            <b-input class="has-text-centered" v-model="page" size="is-small"></b-input>
+            <b-button size="is-small" type="is-success" @click="changePage(1)" :disabled="page==max_page">></b-button size="is-small">
+            <b-button size="is-small" type="is-success" @click="changePage(100)" :disabled="page==max_page">>></b-button size="is-small">
+        </b-field>
+    </div>
+{% endblock %}
+
+{% block js %}
+<script>
+    new Vue({
+        el: '#job_app',
+        delimiters: ['[[', ']]'],
+        data: {
+            isFetching: null,
+            page: 1,
+            max_page: 1,
+            startingXp: 1,
+            selectedJob: null,
+            globalCraftXpRatio: 100,
+            crafts: [],
+            ratios: [100, 125, 150, 200, 300, 375, 450, 600],
+            jobs: {},
+            recipes: {},
+            cart: []
+        },
+        mounted: function () {
+            if (localStorage.jobs) {
+                this.jobs = JSON.parse(localStorage.jobs)
+            } else {
+                this.isFetching = 'jobs'
+                this.$http.get(`/getJobs`)
+                .then(({ data }) => {
+                    this.jobs = data
+                    localStorage.jobs = JSON.stringify(this.jobs)
+                }).catch((error) => {
+                    this.jobs = {}
+                    throw error
+                }).finally(() => {
+                    this.isFetching = null
+                })
+            }
+            if (localStorage.recipes) {
+                this.recipes = JSON.parse(localStorage.recipes)
+            } else {
+                this.isFetching = 'recipes'
+                this.$http.get(`/getRecipes`)
+                .then(({ data }) => {
+                    this.recipes = data
+                    localStorage.recipes = JSON.stringify(this.recipes)
+                }).catch((error) => {
+                    this.recipes = {}
+                    throw error
+                }).finally(() => {
+                    this.isFetching = null
+                })
+            }
+            if (localStorage.cart) {
+                this.cart = JSON.parse(localStorage.cart)
+            }
+        },
+        computed: {
+            currentXp: function() {
+                let tempXp = Math.max(this.startingXp, 1)
+                let indexes_to_delete = []
+                this.crafts.forEach((craft, key) => {
+                    let tempQty = 0
+                    let tempLevel = this.xpToLevel(tempXp)
+                    this.crafts[key]['startingXp'] = tempXp
+                    if (craft.recipe.level > tempLevel) {
+                        indexes_to_delete.unshift(key)
+                        return
+                    }
+                    while (tempQty < craft.quantity) {
+                        tempXp += this.getCraftXp(this.xpToLevel(tempXp), craft.recipe.level, craft.recipe.craftXp)
+                        tempQty++
+                    }
+                    this.crafts[key]['finalXp'] = tempXp
+                })
+                indexes_to_delete.forEach((key) => {
+                    this.crafts.splice(key, 1)
+                })
+                return tempXp
+            },
+            currentLevel: function() {
+                return this.xpToLevel(this.currentXp)
+            },
+            displayed_recipes: function() {
+                let result = this.recipes.filter((recipe) => {
+                    return recipe.job_id == this.selectedJob.id && recipe.level <= this.currentLevel && recipe.level > this.currentLevel - 59;
+                })
+                this.max_page = Math.ceil(result.length / 10)
+                return result.slice((this.page - 1) * 10, this.page * 10)
+            },
+        },
+        methods: {
+            changePage(value) {
+                if ((this.page + value) < 1) {
+                    this.page = 1
+                } else if ((this.page + value) > this.max_page) {
+                    this.page = this.max_page
+                } else {
+                    this.page = this.page + value
+                }
+            },
+            resetCrafts() {
+                this.crafts = []
+            },
+            debounce: _.debounce(function(evt, key, type) {this.updateQuantity(evt, key, type)}, 750),
+            updateQuantity(evt, key, type) {
+                let value = parseInt(evt.target.value || evt.target.innerText)
+                let check = type == 1 ? value == this.crafts[key]['qty'] : value == this.xpToLevel(this.crafts[key]['finalXp'])
+                if (value > 0 && !check){
+                    let recipe = this.crafts[key]['recipe']
+                    let startingXp
+                    if (key == 0 ){
+                        startingXp = this.startingXp
+                    } else {
+                        startingXp = this.crafts[key-1].finalXp
+                    }
+                    let tempXp = startingXp
+                    let craftXp
+                    let qty
+                    if (type == 1){
+                        qty = value
+                        for(let i = 0; i < qty; i++){
+                            craftXp = this.getCraftXp(this.xpToLevel(tempXp), recipe.level, recipe.craftXp)
+                            if (craftXp == 0) { break }
+                            tempXp += craftXp
+                        }
+                    } else {
+                        let targetXp = this.levelToXp(value)
+                        qty = 0
+                        while (tempXp < targetXp) {
+                            craftXp = this.getCraftXp(this.xpToLevel(tempXp), recipe.level, recipe.craftXp)
+                            if (craftXp == 0) { break }
+                            tempXp += craftXp
+                            qty ++
+                        }
+                    }
+                    this.crafts[key].quantity = qty
+                }
+            },
+            removeCraft(craft_index) {
+                this.crafts.splice(craft_index, 1)
+                return
+            },
+            addCraft(recipe, qty, target){
+                if (recipe.level <= this.currentLevel ) {
+                    let startingXp = this.currentXp
+                    let startingLevel = this.xpToLevel(startingXp)
+                    let tempXp = startingXp
+                    let craftXp
+                    if (startingLevel < 200){
+                        if (qty > 0) {
+                            for (let i = 0 ; i < qty; i++){
+                                craftXp = this.getCraftXp(this.xpToLevel(tempXp), recipe.level, recipe.craftXp)
+                                if (craftXp == 0) { break }
+                                tempXp += craftXp
+                            }
+                        } else if (target > 0) {
+                            let targetXp = this.levelToXp(Math.min(recipe.level + target - recipe.level % 10, 200))
+                            qty = 0
+                            while (tempXp < targetXp) {
+                                craftXp = this.getCraftXp(this.xpToLevel(tempXp), recipe.level, recipe.craftXp)
+                                if (craftXp == 0) {
+                                    break
+                                }
+                                qty++
+                                tempXp+=craftXp
+                            }
+                        }
+                        if (qty > 0) {
+                            this.crafts.push({
+                                recipe: recipe,
+                                quantity: qty,
+                                startingXp: startingXp,
+                                finalXp: tempXp
+                            })
+                        }
+                    }
+                }
+            },
+            getCraftXp(joblevel, craftLevel, craftXp){
+                let xp
+                if (joblevel - craftLevel >= 0 && joblevel - craftLevel < 59){
+                    xp = Math.floor(craftXp / (1 + 0.1 * Math.pow(joblevel - craftLevel, 1.1)) * this.globalCraftXpRatio / 100 )
+                } else {
+                    xp = 0
+                }
+                return xp
+            },
+            xpToLevel(xp) {
+                return Math.max(
+                    Math.min(
+                        Math.floor(
+                            (Math.sqrt(1 + 0.4 * xp) + 1) / 2
+                        ),
+                        200),
+                    1
+                )
+            },
+            levelToXp(level) {
+                return level*(level-1)*10
+            },
+            addToCart: function() {
+                this.crafts.forEach((craft, key) => {
+                    this.cart.push({
+                        id: craft.recipe.id,
+                        name: craft.recipe.name,
+                        icon_id: craft.recipe.icon_id,
+                        recipe: craft.recipe.ing,
+                        to_craft: true,
+                        qty: craft.quantity,
+                        for: this.selectedJob.label + ' ' + this.xpToLevel(craft.startingXp) + '->' + this.xpToLevel(craft.finalXp)
+                    })
+                })
+                localStorage.cart = JSON.stringify(this.cart)
+            }
+        }
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "rest_framework/base.html" %}
+{% load i18n %}
+
+{% comment "Reference Documentation" %}
+<!-- https://www.django-rest-framework.org/topics/browsable-api/ -->
+{% endcomment %}
+
+{% block branding %}
+    <a class="navbar-brand" rel="nofollow" href="#">
+        {% trans 'Profus API' %}
+    </a>
+{% endblock %}

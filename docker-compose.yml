@@ -1,0 +1,59 @@
+# docker-compose version
+# more references here : https://docs.docker.com/compose/compose-file/
+# version: "3.9" optional
+
+services:
+
+    frontend:
+        build: ./frontend
+        command: yarn dev
+        volumes:
+        - ./frontend:/app
+        ports:
+        - "3000:3000"
+        depends_on:
+        - backend
+
+    db:
+        image: postgres:alpine
+        volumes:
+        - ./data/db:/var/lib/postgresql/data
+        ports:
+        - "5432:5432"
+        environment:
+        - POSTGRES_DB=test
+        - POSTGRES_USER=user
+        - POSTGRES_PASSWORD=password
+
+    backend:
+        build: ./backend
+        image: profus_backend
+        command: python /code/manage.py runserver 0.0.0.0:8000
+        environment:
+        - DJANGO_SETTINGS_MODULE=config.settings.local
+        volumes:
+        - ./backend:/code
+        ports:
+        - "8000:8000"
+        depends_on:
+        - db_migrate
+
+    db_make_migrations:
+        image: profus_backend
+        command: python /code/manage.py makemigrations --noinput
+        volumes:
+            - ./backend:/code
+        depends_on:
+            - db
+
+    db_migrate:
+        image: profus_backend
+        command: python /code/manage.py migrate --noinput
+        depends_on:
+            - db_make_migrations
+
+    collectstatic:
+        image: profus_backend
+        command: python /code/manage.py collectstatic --noinput
+        volumes:
+            - ./backend:/code

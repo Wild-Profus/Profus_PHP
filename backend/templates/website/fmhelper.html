@@ -1,0 +1,109 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Fm" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div id="fm_app" class="notification has-text-centered">
+        <table v-cloak class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <tbody>
+                <tr>
+                    <th>{{ i18n.7495 }}</th>
+                    <th>{{ i18n.660881 }}</th>
+                    <th>{{ i18n.600479 }}</th>
+                    <th>{{ i18n.660881 }} {{ i18n.600479 }}</th>
+                    <th>{{ i18n.67029 }} Pa</th>
+                    <th>Pa</th>
+                    <th>{{ i18n.67029 }} Ra</th>
+                    <th>Ra</th>
+                    <th>{{ i18n.66577 }}</th>
+                </tr>
+                <tr v-for="(rune, key) in filteredRunes">
+                    <td>
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="image is-24x24" :src="`/static/characteristics/${rune.charId}.svg`">
+                            </div>
+                            <div class="media-content">
+                                [[ rune.charName ]]
+                            </div>
+                        </div>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ rune.weight ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="image is-24x24" :src="`/static/dofus2/dofusData/item/bitmap/${Math.floor(rune.runeIcon_1/1000)}/${rune.runeIcon_1}.png`">
+                            </div>
+                            <div class="media-content">
+                                [[ rune.runeName_1.replace('Rune ', '') ]]
+                            </div>
+                        </div>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ rune.runeVal_1 * rune.weight + ' (+' + rune.runeVal_1 + ')' ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ rune.runeVal_2 ? Math.floor(101/rune.weight*1/3) : '' ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ rune.runeVal_2 ? rune.runeVal_2 * rune.weight + ' (+' + rune.runeVal_2 + ')' : '' ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ rune.runeVal_3 ? Math.floor(101/rune.weight*2/3) : '' ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ rune.runeVal_3 ? rune.runeVal_3 * rune.weight + ' (+' + rune.runeVal_3 + ')' : '' ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ Math.floor(101/rune.weight) ]]
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        new Vue({
+            el: '#fm_app',
+            delimiters: ['[[', ']]'],
+            data: {
+                filter: null,
+                runes: {},
+                isFetching: false
+            },
+            beforeCreate: function () {
+                this.isFetching = true
+                this.$http.get(`/getRunes`)
+                    .then(({ data }) => {
+                        this.runes = data
+                    })
+                    .catch((error) => {
+                        this.runes = {}
+                        throw error
+                    })
+                    .finally(() => {
+                        this.isFetching = false
+                    })
+            },
+            computed: {
+                filteredRunes: function() {
+                    if (this.filter){
+                        return this.runes.filter((rune) => {
+                            return rune.label.toUpperCase().indexOf(this.filter) > -1
+                        })
+                    } else {
+                        return this.runes
+                    }
+                },
+            },
+        })
+    </script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Idols" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div id="idol_app" class="content-area">
+        <div class="container is-fluid">
+            <span v-for="idol in idols" class="is-1">
+                <figure class="is-128x128">
+                    <img :src="`http://localhost:8000/static/dofus2/dofusData/item/bitmap/${Math.floor(idol.item__iconId/1000)}/${idol.item__iconId}.png`">
+                    [[idol.name]][[idol.item__level]]
+                </figure>
+            </span>
+          </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+<script>
+    Vue.http.interceptors.push(function(request, next) {
+        request.headers.set('X-CSRFToken', '{% csrf_token %}'.substr(55).slice(0, -2))
+        request.headers.set('Content-type', 'application/json;charset=utf-8')
+        request.headers.set('Authorization', 'Bearer TOKEN')
+        next()
+    })
+new Vue({
+    el: '#idol_app',
+    delimiters: ['[[', ']]'],
+    data: {
+        score: 0,
+        composition: [],
+        idols: null,
+        scores: 0
+    },
+    computed: {
+        incompatibleMonsters() {
+            var arr = {}
+            for (i in this.composition) {
+                for (mob in i.incompatibleMonsters) {
+                    arr[mob] = mob
+                }
+            }
+            return arr.values()
+        }
+    },
+    methods: {
+        
+    }
+})
+</script>
+{% endblock %}

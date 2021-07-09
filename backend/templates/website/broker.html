@@ -1,0 +1,395 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Break" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div id="broke_app" class="notification">
+        <b-field v-cloak>
+            <b-select v-model="selectedServer" @input="updateServer">
+                <option v-for="server in servers" :value="server">
+                    [[ server.label ]]
+                </option>
+            </b-select>
+            <b-autocomplete
+                :data="data"
+                placeholder="{{ i18n.755193 }}"
+                field="itemName"
+                expanded
+                :loading="isFetching != null"
+                @typing="lookItem"
+                @select="getItemStats">
+                <template slot-scope="props">
+                    <div class="media">
+                        <figure class="media-left">
+                            <img class="image is-32x32" :src="`/static/dofus2/dofusData/item/bitmap/${Math.floor(props.option.iconId/1000)}/${props.option.iconId}.png`">
+                        </figure>
+                        <div class="media-content">
+                            [[ props.option.label ]]
+                            <small>
+                                {{ i18n.66573 }} [[ props.option.level ]]
+                            </small>
+                        </div>
+                    </div>
+                </template>
+            </b-autocomplete>
+        </b-field>
+        <div v-cloak v-if="selected" class="columns is-vcentered has-text-centered">
+            <div class="column has-text-centered is-4">
+                <img class="image is-64x64" :src="`/static/dofus2/dofusData/item/bitmap/${Math.floor(selected.iconId/1000)}/${selected.iconId}.png`">
+                <h2 class="title is-3 nobreak">
+                    [[ selected.label ]] ({{ i18n.66573 }} [[ selected.level ]])
+                </h2>
+            </div>
+            <div class="column">
+                <b-field>
+                    <p class="control">
+                        <span class="button is-static">{{ i18n.803551|title }} ([[ selectedServer.label ]], [[ ratioDateText ]])</span>
+                    </p>
+                    <b-input v-model="ratio"></b-input>
+                    <p class="control">
+                        <span class="button is-static">%</span>
+                    </p>
+                    <p class="control">
+                        <span class="button is-primary" @click="saveRatio">{{ i18n.66770 }}</span>
+                    </p>
+                    <p class="control">
+                        <span class="button is-success" @click="addToCart"><b>+</b></span>
+                    </p>
+                </b-field>
+            </div>
+        </div>
+        <table v-cloak v-if="selected" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <tbody>
+                <tr>
+                    <th>{{ i18n.7495 }}</th>
+                    <th class="has-text-centered">{{ i18n.66824 }}</th>
+                    <th class="has-text-centered">{{ i18n.66690 }}
+                        <b-button size="is-small is-primary" @click="savePrices">
+                            {{ i18n.66770 }}
+                        </b-button>
+                    </th>
+                    <th class="has-text-centered">{{ i18n.66701 }} ({{ i18n.798 }})</th>
+                    <th class="has-text-centered">{{ i18n.67745 }} ({{ i18n.798 }})</th>
+                    <th class="has-text-centered">{{ i18n.674459 }}</th>
+                </tr>
+                <tr v-for="(stat, key) in itemStats" :key='key'>
+                    <td>
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="image is-24x24" :src="`/static/characteristics/${stat.char_id}.svg`">
+                            </div>
+                            <div class="media-content is-size-6">
+                                [[ stat.char_name ]]
+                            </div>
+                        </div>
+                    </td>
+                    <td class="has-text-centered" contenteditable="True" @input="debounce($event, 0, key)" @blur="onEdit($event, 0, key)">
+                        [[ stat.roll ]]
+                    </td>
+                    <td class="has-text-centered" contenteditable="True" @input="debounce($event, 1, key)" @blur="onEdit($event, 1, key)">
+                        [[ price(stat.char_id) ]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ focusQuantity(stat) ]]
+                    </td>
+                    <td class="has-text-centered" :class="maxFocusValue() >= noFocusPrice() && Math.floor(focusQuantity(stat)) * price(stat.char_id) == maxFocusValue() ? 'is-success' : ''">
+                        [[ Math.floor(focusQuantity(stat)) * price(stat.char_id)]]
+                    </td>
+                    <td class="has-text-centered">
+                        [[ noFocusQuantity(stat) ]]
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th class="has-text-right" colspan="5">{{ i18n.66856 }} ({{ i18n.674459 }}):</th>
+                <td  class="has-text-centered" :class="maxFocusValue() <= noFocusPrice() ? 'is-success' : ''">[[ noFocusPrice() ]]</td>
+              </tr>
+             </tfoot>
+        </table>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        //Vue.prototype.$http = axios
+        Vue.http.interceptors.push(function(request, next) {
+            request.headers.set('X-CSRFToken', '{% csrf_token %}'.substr(55).slice(0, -2))
+            request.headers.set('Content-type', 'application/json;charset=utf-8')
+            request.headers.set('Authorization', 'Bearer TOKEN')
+            next()
+        })
+
+        new Vue({
+            el: '#broke_app',
+            delimiters: ['[[', ']]'],
+            data: {
+                data: [],
+                selected: null,
+                ratio: null,
+                ratioDate: '',
+                selectedServer: null,
+                cart: [],
+                servers: {},
+                runes: {},
+                runePrices: {},
+                itemStats: [],
+                isFetching: null
+            },
+            mounted: function () {
+                if (localStorage.servers) {
+                    this.servers = JSON.parse(localStorage.servers)
+                } else {
+                    this.isFetching = 'servers'
+                    this.$http.get(`/getServers`)
+                    .then(({ data }) => {
+                        this.servers = data
+                        localStorage.servers = JSON.stringify(this.servers)
+                    }).catch((error) => {
+                        throw error
+                    }).finally(() => {
+                        this.isFetching = null
+                    })
+                }
+                if (localStorage.preferred_server) {
+                    this.selectedServer = JSON.parse(localStorage.preferred_server)
+                } else {
+                    this.isFetching = 'preferred_server'
+                    this.$http.get(`/getPreferredServer`)
+                    .then(({ data }) => {
+                        this.servers.forEach((server)=>{
+                            if (server.id == data) {
+                                this.selectedServer = server
+                                localStorage.preferred_server = JSON.stringify(this.selectedServer)
+                            }
+                        })
+                    }).catch((error) => {
+                        throw error
+                    }).finally(() => {
+                        this.isFetching = null
+                    })
+                }
+                if (localStorage.runes) {
+                    this.runes = JSON.parse(localStorage.runes)
+                } else {
+                    this.isFetching = 'runes'
+                    this.$http.get(`/getRunes`)
+                    .then(({ data }) => {
+                        this.runes = data
+                        localStorage.runes = JSON.stringify(this.runes)
+                    }).catch((error) => {
+                        throw error
+                    }).finally(() => {
+                        this.isFetching = null
+                    })
+                }
+                this.isFetching = 'runePrices'
+                this.$http.get(`/getRunePrices/${this.selectedServer.id}`)
+                .then(({ data }) => {
+                    this.runePrices = data
+                }).catch((error) => {
+                    throw error
+                }).finally(() => {
+                    this.isFetching = null
+                })
+                if (localStorage.cart) {
+                    this.cart = JSON.parse(localStorage.cart)
+                }
+            },
+            computed: {
+                ratioDateText() {
+                    let date_str = this.ratioDate.toLocaleString()
+                    if (date_str == 'Invalid Date') {
+                        date_str = 'no date'
+                    }
+                    return date_str
+                }
+            },
+            methods: {
+                totalWeight: function() {
+                    let total = 0
+                    this.itemStats.forEach((stat, key) => {
+                        total = total + stat.roll * stat.weight
+                    })
+                    return total
+                },
+                noFocusPrice: function() {
+                    let total = 0
+                    this.itemStats.forEach((stat, key) => {
+                        total = total + Math.floor(this.noFocusQuantity(stat)) * this.price(stat.char_id)
+                    })
+                    return total
+                },
+                maxFocusValue: function() {
+                    let max = 0
+                    this.itemStats.forEach((stat, key) => {
+                        max = Math.max(max, Math.floor(this.focusQuantity(stat)) * this.price(stat.char_id))
+                    })
+                    return max
+                },
+                price: function(char_id) {
+                    let rune_id = this.runes[char_id].runeId_1
+                    if (rune_id in this.runePrices) {
+                        return this.runePrices[rune_id]
+                    } else {
+                        return 0
+                    }
+                },
+                statWeight: function(char_id) {
+                    return this.runes[char_id].weight
+                },
+                runeWeight: function(char_id) {
+                    return this.runes[char_id].runeVal_1 * this.runes[char_id].weight
+                },
+                focusQuantity: function(stat) {
+                    return Math.round((this.totalWeight() + stat.roll * this.statWeight(stat.char_id)) / 2 / this.runeWeight(stat.char_id) * this.selected.level * 0.025 * this.ratio/100 * 0.55 *100)/100
+                },
+                noFocusQuantity: function(stat) {
+                    return Math.round(stat.roll * this.statWeight(stat.char_id) / this.runeWeight(stat.char_id) * this.selected.level * 0.025 * this.ratio/100 * 0.55 *100)/100
+                },
+                lookItem: _.debounce(function(event) {
+                    itemName = event
+                    this.isFetching = 'items by name'
+                    this.$http.get(`/lookItems/${itemName}`)
+                    .then(({ data }) => {
+                        this.data = []
+                        data.results.forEach((itemName) => this.data.push(itemName))
+                    })
+                    .catch((error) => {
+                        this.data = []
+                        throw error
+                    })
+                    .finally(() => {
+                        this.isFetching = null
+                    })
+                }, 750),
+                getItemStats: function(item) {
+                    if (item.id) {
+                        this.selected = item
+                        this.isFetching = 'item'
+                        this.$http.get(`/lookItemStats/${item.id}`)
+                        .then(({ data }) => {
+                            this.itemStats = data.results
+                            this.itemStats.forEach((stat, key) => {
+                                stat.roll = stat.useDice ? Math.round((stat.max + stat.min)/2) : stat.value
+                            })
+                        })
+                        .catch((error) => {
+                            throw error
+                        })
+                        .finally(() => {
+                            this.isFetching = null
+                        })
+                        this.getItemBreakRatio()
+                    }
+                },
+                getItemBreakRatio() {
+                    this.isFetching = 'item break ratio'
+                    this.$http.get(`/getItemBreakRatio/${this.selectedServer.id}/${this.selected.id}`)
+                    .then(({ data }) => {
+                        this.ratio = data.rate
+                        this.ratioDate = new Date(data.date)
+                    })
+                    .catch((error) => {
+                        this.ratio = 100
+                        //throw error
+                    })
+                    .finally(() => {
+                        this.isFetching = null
+                    })
+                },
+                savePrices: function() {
+                    ajaxRequest = true
+                    this.$http.post('/saveItemPrices',
+                    {
+                        'server': this.selectedServer.id,
+                        'items': this.runePrices
+                    }
+                    ).then(({ data }) => {
+                        ajaxRequest = false
+                    })
+                    .catch((error) => {
+                        throw error
+                    })
+                    .finally(() => {
+                    })
+                },
+                saveRatio: function() {
+                    ajaxRequest = true
+                    this.$http.post('/saveItemBreakRatio',
+                    {
+                            'serverId': this.selectedServer.id,
+                            'itemId': this.selected.id,
+                            'ratio': this.ratio
+                    }
+                    ).then(({ data }) => {
+                        this.ratioDate = new Date()
+                        ajaxRequest = false
+                    })
+                    .catch((error) => {
+                        throw error
+                    })
+                    .finally(() => {
+                    })
+                },
+                updateServer: function(evt) {
+                    this.isFetching = 'runesPrices'
+                    this.$http.get(`/getRunePrices/${this.selectedServer.id}`)
+                        .then(({ data }) => {
+                            this.runePrices = data
+                        })
+                        .catch((error) => {
+                            throw error
+                        })
+                        .finally(() => {
+                            this.isFetching = null
+                        })
+                    if (this.selected) {
+                        this.getItemBreakRatio()
+                    }
+                },
+                debounce: _.debounce(function(evt, type, index) {
+                    this.onEdit(evt, type, index)
+                }, 750),
+                onEdit: function(evt, type, index) {
+                    let value = parseInt(evt.target.innerText)
+                    if (type == 0) {
+                        this.itemStats[index].roll = value
+                    } else {
+                        this.runePrices[this.runes[this.itemStats[index].char_id].runeId_1] = value
+                    }
+                    this.$forceUpdate()
+                },
+                addToCart: function() {
+                    if (this.selected.id) {
+                        let check = true
+                        this.cart.forEach((item, index) => {
+                            if (item.id == this.selected.id) {
+                                item.qty += 1
+                                check = false
+                                return
+                            }
+                        })
+                        if (check){
+                            this.cart.push({
+                                id: this.selected.id,
+                                name: this.selected.label,
+                                icon_id: this.selected.iconId,
+                                recipe: null,
+                                to_craft: false,
+                                qty: 1,
+                                for: 'Brisage'
+                            })
+                        }
+                    }
+                    localStorage.cart = JSON.stringify(this.cart)
+                }
+            }
+        })
+    </script>
+{% endblock %}

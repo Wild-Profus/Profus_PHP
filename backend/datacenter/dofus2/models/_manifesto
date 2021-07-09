@@ -1,0 +1,8 @@
+Notes on string field types:
+Char is a blank-padded type only there for compatibility with old code and standards.
+Varchar is never to be used. Use a Check constraint if a lenght check is required.
+Check is much more convenient to change later (without table rewrite),
+even more so when views, functions, FK constraints etc. depend on the column type.
+ALTER TABLE tbl ADD CONSTRAINT tbl_col_len CHECK (length(col) < 100);
+Text is the best character type, with no apparent downside, and as such should be used as often as needed.
+https://www.depesz.com/2010/03/02/charx-vs-varcharx-vs-varchar-vs-text/

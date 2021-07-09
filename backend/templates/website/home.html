@@ -1,0 +1,31 @@
+{% extends "./coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Home" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div class="content-area">
+      <h1>Bienvenue sur Profus<small>&beta;</small> !</h1>
+      <p> Après plus d'un an, voici enfin la nouvelle version du site ! J'espère que le design vous plaira autant qu'à moi :p. <br>
+      Voici la liste principale des évolutions :<br>
+      - La carte des ressources est à jour ! La mise à jour de la carte se fait désormais plus rapidement après chaque maj.<br>
+      - Le site passe sous Symfony ! Le design peut se changer plus facilement, le site est mieux rangé, c'est génial !!!<br>
+      - Le site passe sous Vue.js ! Ce framework permet de mieux synchroniser les données entre la base sql et le site (panier plus smooth !).<br>
+      - Outil de recherche d'objet : je m'en sers depuis un bon moment déjà, je vous le partage dans une version à peu près aboutie.<br>
+      - Désormais, chaque utilisateur dispose d'un inventaire qu'il peut remplir afin que la shopping liste ne lui affiche que ce dont il a besoin !
+      Aussi, vous pouvez faire parti d'un groupe afin de mutualiser les inventaires quand vous farmez ! Un inventaire est publique ou privé.<br>
+      - Nouvel outil en cours de développement, le tradehelper ! J'aime beaucoup kamater, mais j'oublie combien j'ai payé les ressources/objets avant la vente ! Je vous propose cet outil afin de faciliter le suivi des ventes, n'hésitez pas à faire des retours afin qu'il évolue un maximum et couvre tous les besoins possibles et imaginables ! J'appelle notamment tous ceux utilisant des tableurs excel perso à partager les infos suivies :p<br>
+      - le multi thème !<br>
+      - Pleins d'autres petits trucs qui vont rentrer dans la liste des <i>divers et variés</i>.
+      </p>
+      <p>Comme auparavant, si vous avez des questions ou des suggestions, vous pouvez me contacter sur <a href="https://discord.gg/CDkz6Fj">Discord</a>.<br>
+      Le site est désormais en version beta, je vous remercie toujours pour votre bienveillance et vos retours.<br>
+      La plupart des images sont la propriété d'Ankama, merci de respecter leurs créations !<br>
+      Affectueusement, Wild</p>
+    </div>
+    {#{ include("Advert/_form.html.twig") }#}
+{% endblock %}
+

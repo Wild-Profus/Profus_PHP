@@ -1,0 +1,15 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Account" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div class="content-area">
+        {% include "./formSnippet.html" with form=account_form i18n=i18n %}
+        <div><a href="./logout">{{ i18n.224908 }}</a></div>
+    </div>
+{% endblock %}
+

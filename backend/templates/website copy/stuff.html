@@ -1,0 +1,213 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Stuff" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+
+{% block body %}
+    <div id="stuff_app" class="content-area">
+        <div class="container is-fluid">
+            <span v-for="effect in browsable">
+                <b-tooltip :label="`${effect.name}`">
+                    <button class="button is-light is-small is-paddingless">
+                        <img class="image is-24x24" width ="24" :src="`http://localhost:8000/static/characteristics/${effect.effect__characteristic__id}.svg`" :alt="`${effect.name}`">
+                    </button>
+                </b-tooltip>
+            </span>
+        </div>
+        <div class="container is-fluid">
+            <b-field>
+                <b-select v-model="selectedBreed" placeholder="{{ i18n.66629 }}">
+                    <option selected="selected" :value=0>{{ i18n.66629 }}</option>
+                    <option
+                        v-for="breed in breeds"
+                        :value="breed.id">
+                        [[ breed.name ]]
+                    </option>
+                </b-select>
+                <b-select v-model="selectedSpell">
+                    <option class="has-icons-left"
+                        v-for="breedSpell in selectedBreedSpells"
+                        :value="breedSpell">
+                        <span>
+                            [[ breedSpell.spellName ]]
+                        </span>
+                    </option>
+                </b-select>
+                <p class="control">
+                    <span class="button is-static">{{ i18n.66569 }}</span>
+                </p>
+                <b-field>
+                    <b-input v-model="maxLevel"
+                        type="number"
+                        min="1"
+                        max="200">
+                    </b-input>
+                </b-field>
+                <p class="control">
+                    <button class="button is-light is-paddingless" :active="criticalEffect" @click="toggleCrit">
+                        <img class="image" width="32" :src="`http://localhost:8000/static/characteristics/18.svg`" alt="crit">
+                    </button>
+                </p>
+               <p class="control">
+                    <span class="button is-success" @click="addSpell">+</span>
+                </p>
+            </b-field>
+        </div>
+        <div class="container">
+            <b-table :data="selectedSpells" narrowed>
+                <template slot-scope="props">
+                    <b-table-column label="{{ i18n.426050 }}">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="" width ="24" :src="`http://localhost:8000/static/spells/${props.row.spellIcon}.svg`">
+                            </div>
+                            <div class="media-content has-text-weight-bold is-size-5">
+                                [[ props.row.spellName ]]
+                            </div>
+                            <div v-if="props.row.crit" class="media-right">
+                                <img class="image" width="32" :src="`http://localhost:8000/static/characteristics/18.svg`" alt="crit">
+                            </div>
+                        </div>
+                    </b-table-column>
+                    <b-table-column label="{{ i18n.67425 }}" numeric centered style="vertical-align: middle;">
+                        [[ props.row.min + '-' + props.row.max + ' ' + props.row.effectName ]]
+                    </b-table-column>
+                    <b-table-column label="{{ i18n.66701 }}" numeric centered style="vertical-align: middle;" contenteditable v-on:input.native="onEdit($event)" :data-pos="props.row.position" :data-type=1>
+                        [[ props.row.target ]]
+                    </b-table-column>
+                    <b-table-column label="{{ i18n.66353 }}" numeric centered style="vertical-align: middle;">
+                        <b-button v-for="boost in props.row.boosts" size="is-small" type="is-success" v-bind:key="boost.boostId" @click="toggleBoost"> [[ boost.value ]] </b-button>
+                    </b-table-column>
+                    <b-table-column numeric centered style="vertical-align: middle;">
+                        <b-button label="{{ i18n.66350 }}" size="is-small" type="is-danger" v-on:click="removeEffect(props.index)"></b-button>
+                    </b-table-column>
+                </template>
+            </b-table>
+            <b-button label="{{ i18n.66350 }}" size="is-small" type="is-success" @click="rankItems"></b-button>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+<script>
+    Vue.http.interceptors.push(function(request, next) {
+        request.headers.set('X-CSRFToken', '{% csrf_token %}'.substr(55).slice(0, -2))
+        request.headers.set('Content-type', 'application/json;charset=utf-8')
+        request.headers.set('Authorization', 'Bearer TOKEN')
+        next()
+    })
+new Vue({
+    el: '#stuff_app',
+    delimiters: ['[[', ']]'],
+    data: {
+        selectedBreed: 0,
+        breeds: {{ breeds|safe }},
+        breedSpells: {{ breedSpells|safe }},
+        browsable: {{ browsable|safe }},
+        itemEffects: {{ itemEffects|safe }},
+        maxLevel: 200,
+        selectedSpell: null,
+        criticalEffect: false,
+        selectedSpells: []
+    },
+    computed: {
+        selectedBreedSpells(){
+            if (this.selectedBreed == 0) {
+                return this.breedSpells
+            } else {
+                var spells = {}
+                for (spell in this.breedSpells) {
+                    if (this.breedSpells[spell]['spellBreed'] == this.selectedBreed) {
+                        spells[spell]=this.breedSpells[spell]
+                    }
+                }
+                return spells
+            }
+        }
+    },
+    methods: {
+        addSpell(){
+            var spell = this.selectedSpell
+            if (spell) {
+                var grade
+                for (i=3; i>0; i--){
+                    if (i in spell.spellLevels){
+                        if (spell.spellLevels[i].minPlayerLevel <= this.maxLevel){
+                            grade = i
+                            break
+                        }
+                    }
+                }
+                if (grade < 1) {
+                    this.errorMessage = "Selected level is too low."
+                    return
+                }
+                var spellType
+                if (this.criticalEffect) {
+                    spellType = 'critical'
+                } else {
+                    spellType = 'normal'
+                }
+                var spellData = []
+                var boosts = []
+                for (effect in spell.spellLevels[grade]['effects'][spellType]) {
+                    var effectData = spell.spellLevels[grade]['effects'][spellType][effect]
+                    if (effectData['boost'] == 1){
+                        boosts.push({
+                            boostId: effectData['effectId'],
+                            boostName: effectData['effectName'],
+                            value: effectData['value'],
+                            elementId: effectData['elementId'],
+                            useDice: effectData['useDice']
+                        })
+                    }
+                }
+                for (effect in spell.spellLevels[grade]['effects'][spellType]) {
+                    var effectData = spell.spellLevels[grade]['effects'][spellType][effect]
+                    if (effectData['boost'] == 0){
+                        var min
+                        var max
+                        if (effectData['useDice'] == 1) {
+                            min = effectData['diceNum']
+                            max = effectData['diceSide']
+                        } else {
+                            min = effectData['value']
+                            max = effectData['value']
+                        }
+                        this.selectedSpells.push({
+                            spellIcon: spell['spellIcon'],
+                            spellName: spell['spellName'],
+                            effectId: effectData['effectId'],
+                            effectName: effectData['effectName'],
+                            elementId: effectData['elementId'],
+                            crit: this.criticalEffect,
+                            min: min,
+                            max: max,
+                            target: max,
+                            boosts: boosts
+                        })
+                    }
+                }
+            }
+        },
+        toggleCrit(){
+            this.criticalEffect = ! this.criticalEffect
+        },
+        toggleBoost(){
+            this.criticalEffect = ! this.criticalEffect
+        },
+        removeEffect(pos){
+            this.selectedSpells.splice(pos, 1)
+        },
+        rankItems(){
+            console.log('va chercher')
+        }
+    }
+})
+</script>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <link rel="icon" type="../image/png" href="{% static 'icons/favicon.png' %}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+        <title>Profus Data Debugger</title>
+    </head>
+    <body>
+        <section class="section">
+            <div class="container is-fluid">
+                <div class="tile is-ancestor">
+                    <div class="tile is-3">
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="field">
+                                <label class="label">Selection des données à extraire :</label>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="data_type" value="Elements">
+                                        Elements
+                                    </label>
+                                </div>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="data_type" value="Maps">
+                                        Maps
+                                    </label>
+                                </div>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="data_type" value="D2I">
+                                        D2I
+                                    </label>
+                                </div>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="data_type" value="D2O">
+                                        D2O
+                                    </label>
+                                </div>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="data_type" value="D2O+">
+                                        D2O+
+                                    </label>
+                                </div>
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="data_type" value="Gfxs">
+                                        Gfxs
+                                    </label>
+                                </div>
+                              </div>
+                            {% csrf_token %}
+                            <div class="control">
+                                <input class="button is-link" type="submit" name="" value="Go">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tile is-9">
+                        <pre>{{ data|safe }}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

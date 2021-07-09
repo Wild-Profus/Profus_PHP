@@ -1,0 +1,310 @@
+{% extends "profus_app/coreLayout.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Shop" as title %}
+    {{title}} - Profus
+{% endblock %}
+
+{% block body %}
+    <div id="cart_app" class="notification">
+        <b-field v-if="mode">
+            <b-input>
+
+            </b-input>
+            <b-button size="is-small is-primary">
+                Sauvegarder
+            </b-button>
+        </b-field>
+        <table v-cloak v-if="mode" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <tbody>
+                <tr>
+                    <th>Objet</th>
+                    <th class="has-text-centered">Quantité</th>
+                    <th class="has-text-centered">Action</th>
+                    <th class="has-text-centered">Recette</th>
+                    <th class="has-text-centered">Objectif</th>
+                    <th class="has-text-centered">
+                        <b-button size="is-small is-success" @click="make_shopping_list">
+                            ->
+                        </b-button>
+                    </th>
+                </tr>
+                <tr v-for="(item, key) in cart" :key='key'>
+                    <td>
+                        <item :item="item"></item>
+                    </td>
+                    <td class="has-text-centered" contenteditable="true" @input="editQty($event, key)">
+                        [[ item.qty ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <b-button size="is-small is-primary" :class=" item.item ? 'enabled' : 'disabled'" @click="item.recipe ? item.to_craft = ! item.to_craft : item.to_craft = false">
+                            [[ item.to_craft ? 'Fabriquer' : 'Acheter' ]]
+                        </b-button>
+                    </td>
+                    <td class="has-text-centered">
+                        <div v-if="item.item">
+
+                        </div>
+                    </td>
+                    <td>
+                        [[ item.for ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <b-button size="is-small is-danger" @click="delete_item(key)">
+                            X
+                        </b-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table v-cloak v-if="!mode" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <tbody>
+                <tr>
+                    <th>Objet</th>
+                    <th class="has-text-centered">Quantité</th>
+                    <th class="has-text-centered">Objectif</th>
+                    <th class="has-text-centered">
+                        <b-button size="is-small is-success" @click="mode=!mode">
+                            ->
+                        </b-button>
+                    </th>
+                </tr>
+                <tr v-for="(item, key) in shopping_list" :key='key'>
+                    <td>
+                        <item :item="item"></item>
+                    </td>
+                    <td class="has-text-centered">
+                        [[ item.qty ]]
+                    </td>
+                    <td>
+                        [[ item.for ]]
+                    </td>
+                    <td class="has-text-centered">
+                        <b-button v-if="item.is_craft" size="is-small is-success" @click="craft_ingredient(item, key)">
+                            Fabriquer
+                        </b-button>
+                        <b-button size="is-small is-danger" @click="delete_ingredient(key)">
+                            X
+                        </b-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        Vue.http.interceptors.push(function(request, next) {
+            request.headers.set('X-CSRFToken', '{% csrf_token %}'.substr(55).slice(0, -2))
+            request.headers.set('Content-type', 'application/json;charset=utf-8')
+            request.headers.set('Authorization', 'Bearer TOKEN')
+            next()
+        })
+
+        new Vue({
+            el: '#cart_app',
+            delimiters: ['[[', ']]'],
+            data: {
+                selected: null,
+                carts: {},
+                cart: [],
+                preferred_server: null,
+                mode: true,
+                servers: {},
+                recipes: {},
+                isFetching: null,
+                shopping_list: {}
+            },
+            mounted: function () {
+                if (localStorage.servers) {
+                    this.servers = JSON.parse(localStorage.servers)
+                } else {
+                    this.isFetching = 'servers'
+                    this.$http.get(`/getServers`)
+                    .then(({ data }) => {
+                        this.servers = data
+                        localStorage.servers = JSON.stringify(this.servers)
+                    }).catch((error) => {
+                        throw error
+                    }).finally(() => {
+                        this.isFetching = null
+                    })
+                }
+                if (localStorage.preferred_server) {
+                    this.selectedServer = JSON.parse(localStorage.preferred_server)
+                } else {
+                    this.isFetching = 'preferred_server'
+                    this.$http.get(`/getPreferredServer`)
+                    .then(({ data }) => {
+                        this.servers.forEach((server)=>{
+                            if (server.id == data) {
+                                this.selectedServer = server
+                                localStorage.preferred_server = JSON.stringify(this.selectedServer)
+                            }
+                        })
+                    }).catch((error) => {
+                        throw error
+                    }).finally(() => {
+                        this.isFetching = null
+                    })
+                }
+                if (localStorage.recipes) {
+                    this.recipes = JSON.parse(localStorage.recipes)
+                } else {
+                    this.isFetching = 'recipes'
+                    this.$http.get(`/getRecipes`)
+                    .then(({ data }) => {
+                        this.recipes = data
+                        localStorage.recipes = JSON.stringify(this.recipes)
+                    }).catch((error) => {
+                        this.recipes = {}
+                        throw error
+                    }).finally(() => {
+                        this.isFetching = null
+                    })
+                }
+                if (localStorage.cart) {
+                    this.cart = JSON.parse(localStorage.cart)
+                    this.cart.forEach((item, key) => {
+                        if (!item.recipe) {
+                            this.recipes.forEach((recipe, index) => {
+                                if (item.id == recipe.id) {
+                                    this.cart[key].recipe = this.recipes[index].ing
+                                    return
+                                }
+                            })
+                        }
+                    })
+                }
+                this.isFetching = 'carts'
+                this.$http.get(`/getCarts`)
+                .then(({ data }) => {
+                    this.carts = data
+                }).catch((error) => {
+                    this.carts = {}
+                    throw error
+                }).finally(() => {
+                    this.isFetching = null
+                })
+            },
+            computed: {
+            },
+            methods: {
+                delete_item: function(key) {
+                    this.cart.splice(key, 1)
+                    localStorage.cart = JSON.stringify(this.cart)
+                },
+                delete_ingredient: function(key) {
+                    delete this.shopping_list[key]
+                    this.$forceUpdate()
+                },
+                make_shopping_list: function() {
+                    this.mode = !this.mode
+                    let list = {}
+                    this.cart.forEach((item, index) => {
+                        if (!item.to_craft) {
+                            if (item.id in list) {
+                                list[item.id].qty += item.qty
+                                list[item.id].for += ', x' + item.qty + ' ' + item.name + ' (' + item.for + ')'
+                            } else {
+                                list[item.id] = {
+                                    'name': item.name,
+                                    'icon_id': item.icon_id,
+                                    'qty': item.qty,
+                                    'for': item.for,
+                                }
+                            }
+                        } else {
+                            item.recipe.forEach((ingre, index) => {
+                                if (ingre.iid in list) {
+                                    list[ingre.iid].qty += ingre.qty * item.qty
+                                    list[ingre.iid].for += ', x' + item.qty + ' ' + item.name + ' (' + item.for + ')'
+                                } else {
+                                    list[ingre.iid] = {
+                                        'name': ingre.name,
+                                        'icon_id': ingre.icon_id,
+                                        'is_craft': ingre.is_craft,
+                                        'qty': ingre.qty * item.qty,
+                                        'for': 'x' + item.qty + ' ' + item.name + ' (' + item.for + ')'
+                                    }
+                                }
+                            })
+                        }
+                    })
+                    this.shopping_list = list
+                },
+                editQty: function(evt, index) {
+                    let quantity = Number(evt.target.innerHTML)
+                    if (quantity > 0) {
+                        this.cart[index].qty = quantity
+                    }
+                },
+                craft_ingredient: function(item, index) {
+                    let selected_recipe = null
+                    let temp = this.shopping_list
+                    this.recipes.forEach((recipe, key) => {
+                        if(recipe.id == index) {
+                            selected_recipe = recipe
+                        }
+                    })
+                    selected_recipe.ing.forEach((ingre, index) => {
+                        if (ingre.iid in this.shopping_list) {
+                            temp[ingre.iid].qty += ingre.qty * item.qty
+                            temp[ingre.iid].for += ', x' + item.qty + ' ' + item.name + ' (' + item.for + ')'
+                        } else {
+                            temp[ingre.iid] = {
+                                'name': ingre.name,
+                                'icon_id': ingre.icon_id,
+                                'is_craft': ingre.is_craft,
+                                'qty': ingre.qty * item.qty,
+                                'for': 'x' + item.qty + ' ' + item.name + ' (' + item.for + ')'
+                            }
+                        }
+                    })
+                    delete temp[index]
+                    this.shopping_list = temp
+                    this.$forceUpdate()
+                },
+                getCart: function(cart_id) {
+                    if (item.id) {
+                        this.selected = item
+                        this.isFetching = 'item'
+                        this.$http.get(`/lookItemStats/${item.id}`)
+                        .then(({ data }) => {
+                            this.itemStats = data.results
+                            this.itemStats.forEach((stat, key) => {
+                                stat.roll = stat.useDice ? Math.round((stat.max + stat.min)/2) : stat.value
+                            })
+                        })
+                        .catch((error) => {
+                            throw error
+                        })
+                        .finally(() => {
+                            this.isFetching = null
+                        })
+                    }
+                },
+                saveCart: function() {
+                    ajaxRequest = true
+                    this.$http.post('/saveItemPrices',
+                    {
+                            'server': this.selectedServer.id,
+                            'items': this.runePrices
+                    }
+                    ).then(({ data }) => {
+                        ajaxRequest = false
+                    })
+                    .catch((error) => {
+                        throw error
+                    })
+                    .finally(() => {
+                    })
+                }
+            }
+        })
+    </script>
+{% endblock %}

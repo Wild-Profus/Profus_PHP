@@ -1,0 +1,94 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+	      <link rel="icon" type="../image/png" href="{% static 'icons/favicon.png' %}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="{% static 'css/default.css' %}"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700i">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+        {% block links %}{% endblock %}
+        <title>{% block title %}Profus{% endblock %}</title>
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Profus&gamma;</li>
+                    <li>
+                        <a href="#">Eco</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Brisage</a></li>
+                            <li><a href="#">Map</a></li>
+                            <li><a href="#">Métier</a></li>
+                            <li><a href="#">Almanax</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Fight</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Objets</a></li>
+                            <li><a href="#">Stuffs</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Commerce</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">TradeHelper</a></li>
+                            <li><a href="#">Banque</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tournois</a></li>
+                    <li><a href="#">Marché</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <ul class="menu">
+                    <li><button type="button" class="button" data-toggle="basket">Panier</button></li>
+                </ul>
+                <li>
+                    <a href="#">Mon Compte</a>
+                    <ul class="menu vertical">
+                        <li><a href="#">Persos</a></li>
+                        <li><a href="#">Paramètres</a></li>
+                        <li><a href="#">Se déconnecter</a></li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+        <div class="grid-container">
+          <nav aria-label="You are here:" role="navigation">
+              <ul class="breadcrumbs">
+                  <li>
+                      <span class="show-for-sr">Current: </span> Home
+                  </li>
+              </ul>
+          </nav>
+          <div class="grid-x">
+            <div class="cell small-10">le contenu principal magueule !</div>
+            <div class="cell small-2">Du contenu additionnel, probablement de la pub ?</div>
+          </div>          
+        </div>
+        <div class="large reveal" id="basket" data-reveal data-overlay="false">
+          <p>I feel so free!</p>
+          <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </body>
+    <section>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+        {% block js %}
+        {% endblock %}
+    </section>
+</html>
